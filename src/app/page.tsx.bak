@@ -1,0 +1,381 @@
+﻿'use client';
+
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import Header from '@/components/Header';
+import { Search, Flame, Star, TrendingUp, Clock, ArrowRight, Zap, Shield, Heart, Sparkles, Mail } from 'lucide-react';
+import { supabase, toolsApi, categoriesApi, useMockData, getMockTools, getMockCategories } from '@/lib/supabase';
+import { Tool, Category } from '@/types/database';
+import { categoryIcons, categoryGradients, priceLabels } from '@/lib/design-system';
+
+// 7 澶у垎绫诲畾涔?const mainCategories = [
+  { id: 'ai', name: 'AI 宸ュ叿', icon: '馃', color: 'from-purple-500 to-purple-600', category: 'AI 宸ュ叿', desc: 'ChatGPT銆丆laude 绛夋櫤鑳藉姪鎵?, slug: 'ai-gongju' },
+  { id: 'office', name: '鏁堢巼鍔炲叕', icon: '馃捈', color: 'from-blue-500 to-blue-600', category: '鏁堢巼鍔炲叕', desc: 'Notion銆侀涔︾瓑鍔炲叕鍒╁櫒', slug: 'xiaolv-bangong' },
+  { id: 'media', name: '褰辫濞变箰', icon: '馃帴', color: 'from-red-500 to-red-600', category: '褰辫璧勬簮', desc: 'Netflix銆乊ouTube 绛夊奖瑙嗗钩鍙?, slug: 'yingshi-ziyuan' },
+  { id: 'music', name: '鍦ㄧ嚎闊充箰', icon: '馃幍', color: 'from-yellow-500 to-yellow-600', category: '鍦ㄧ嚎闊充箰', desc: '缃戞槗浜戙€丵Q 闊充箰绛夐煶涔愬钩鍙?, slug: 'zaixian-yinyue' },
+  { id: 'design', name: '璁捐鍒涗綔', icon: '馃帹', color: 'from-pink-500 to-pink-600', category: 'AI 璁捐', desc: 'Midjourney銆丆anva 绛夎璁″伐鍏?, slug: 'ai-sheji' },
+  { id: 'tools', name: '瀹炵敤宸ュ叿', icon: '馃洜锔?, color: 'from-orange-500 to-orange-600', category: '瀹炵敤宸ュ叿', desc: 'PDF 宸ュ叿銆佸浘鐗囧鐞嗙瓑', slug: 'shiyong-gongju' },
+  { id: 'dev', name: '寮€鍙戠紪绋?, icon: '馃捇', color: 'from-green-500 to-green-600', category: '寮€鍙戠紪绋?, desc: 'GitHub銆丼tack Overflow 绛?, slug: 'kaifa-biancheng' },
+];
+
+export default function HomePage() {
+  const [tools, setTools] = useState<Tool[]>([]);
+  const [categories, setCategories] = useState<Category[]>([]);
+  const [popularTools, setPopularTools] = useState<Tool[]>([]);
+  const [latestTools, setLatestTools] = useState<Tool[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [visitorCount, setVisitorCount] = useState(1);
+
+  useEffect(() => {
+    loadData();
+    setVisitorCount(Math.floor(Math.random() * 50) + 1);
+    
+    const interval = setInterval(() => {
+      setVisitorCount(prev => Math.max(1, prev + (Math.floor(Math.random() * 5) - 2)));
+    }, 10000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const handleFocus = () => {
+      loadData();
+    };
+    window.addEventListener('focus', handleFocus);
+    return () => window.removeEventListener('focus', handleFocus);
+  }, []);
+
+  async function loadData() {
+    try {
+      setLoading(true);
+      
+      const res = await fetch('/api/tools', { 
+        cache: 'no-store',
+        next: { revalidate: 300 }
+      });
+      
+      if (!res.ok) {
+        console.error('API 鍝嶅簲澶辫触:', res.status);
+        setTools([]);
+        setLoading(false);
+        return;
+      }
+      
+      const data = await res.json();
+      const allTools = data.tools || [];
+      
+      setTools(allTools);
+      setCategories(getCategoriesFromTools(allTools));
+      setPopularTools(allTools.slice(0, 6));
+      setLatestTools(allTools.slice(0, 6));
+    } catch (error) {
+      console.error('鍔犺浇澶辫触:', error);
+      setTools([]);
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  function getCategoriesFromTools(tools: any[]) {
+    const categories: Record<string, number> = {};
+    tools.forEach(tool => {
+      categories[tool.category] = (categories[tool.category] || 0) + 1;
+    });
+    return Object.entries(categories).map(([name, count]) => ({
+      id: name,
+      name,
+      slug: name.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+      count,
+    }));
+  }
+
+  const getCategoryCount = (name: string) => tools.filter(t => t.category === name).length;
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center gradient-mesh">
+        <div className="text-center">
+          <div className="relative w-16 h-16 mx-auto mb-4">
+            <div className="absolute inset-0 bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl animate-pulse"></div>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="text-3xl">馃尠</span>
+            </div>
+          </div>
+          <p className="text-gray-500 text-sm font-medium animate-pulse">姝ｅ湪鍔犺浇宸ュ叿绠?..</p>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen gradient-mesh">
+      {/* ========== 瀵艰埅鏍?- 鐜荤拑鎬?========== */}
+      <Header />
+
+      {/* ========== Hero 鍖哄煙 - 鍥介檯澶у笀绾ф帓鐗?========== */}
+      <section className="relative py-20 overflow-hidden">
+        {/* 鍔ㄦ€佽儗鏅?*/}
+        <div className="absolute inset-0 gradient-mesh"></div>
+        
+        {/* 鍏夋檿鏁堟灉 */}
+        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-gradient-to-br from-orange-300/20 to-amber-300/20 rounded-full blur-3xl animate-pulse-glow"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-gradient-to-br from-amber-300/20 to-yellow-300/20 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1s' }}></div>
+        
+        {/* 娴姩瑁呴グ */}
+        <div className="absolute top-20 left-10 w-3 h-3 bg-gradient-to-br from-orange-400 to-orange-500 rounded-full opacity-40 animate-float"></div>
+        <div className="absolute bottom-32 right-20 w-4 h-4 bg-gradient-to-br from-amber-400 to-amber-500 rounded-full opacity-40 animate-float" style={{ animationDelay: '0.5s' }}></div>
+        <div className="absolute top-40 right-32 w-2 h-2 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-full opacity-40 animate-float" style={{ animationDelay: '1s' }}></div>
+        
+        <div className="relative container-wide text-center">
+          {/* Logo - 甯﹂槾褰卞拰鍔ㄦ晥 */}
+          <div className="w-28 h-28 mx-auto mb-8 relative group">
+            <div className="absolute inset-0 gradient-primary rounded-3xl shadow-2xl group-hover:shadow-orange-500/40 transition-shadow duration-500"></div>
+            <div className="relative w-28 h-28 rounded-3xl flex items-center justify-center">
+              <span className="text-white text-6xl group-hover:scale-110 transition-transform duration-500">馃尠</span>
+            </div>
+          </div>
+          
+          {/* 涓绘爣棰?- 绮剧‘鎺掔増 */}
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 gradient-text tracking-tight">
+            绮鹃€?510+ 浼樿川宸ュ叿
+          </h1>
+          
+          {/* 鍓爣棰?*/}
+          <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+            涓€绔欏紡瑙ｅ喅宸ヤ綔鐢熸椿闇€姹傦紝鍙戠幇鎻愬崌鏁堢巼鐨勫埄鍣?          </p>
+          
+          {/* 鎼滅储妗?- 绮捐嚧璁捐 */}
+          <div className="max-w-2xl mx-auto mb-12 group">
+            <div className="relative">
+              <div className="absolute inset-0 gradient-primary rounded-2xl blur opacity-20 group-hover:opacity-30 transition-opacity"></div>
+              <form 
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  const input = e.currentTarget.querySelector('input');
+                  if (input && input.value.trim()) {
+                    window.location.href = `/search?q=${encodeURIComponent(input.value.trim())}`;
+                  }
+                }}
+                className="relative flex items-center bg-white/90 backdrop-blur-xl border border-gray-200/50 rounded-2xl px-6 py-4 shadow-xl hover:shadow-2xl transition-all duration-300"
+              >
+                <Search className="text-gray-400 mr-4" size={22} />
+                <input
+                  type="text"
+                  placeholder="鎼滅储浣犻渶瑕佺殑宸ュ叿..."
+                  className="flex-1 text-gray-700 placeholder-gray-400 outline-none text-base"
+                />
+                <button type="submit" className="ml-4 text-orange-600 hover:text-orange-700 transition-colors">
+                  <ArrowRight size={20} />
+                </button>
+              </form>
+            </div>
+          </div>
+          
+          {/* 缁熻鏁版嵁 - 鍗＄墖寮?*/}
+          <div className="grid grid-cols-3 gap-6 max-w-3xl mx-auto">
+            {[
+              { value: `${tools.length}+`, label: '鏀跺綍宸ュ叿', icon: '馃洜锔? },
+              { value: `${visitorCount}+`, label: '瀹炴椂璁块棶', icon: '馃懃' },
+              { value: `${new Set(tools.map(t => t.category)).size}`, label: '宸ュ叿鍒嗙被', icon: '馃搨' },
+            ].map((stat, index) => (
+              <div key={index} className="relative group">
+                <div className="absolute inset-0 bg-white/60 backdrop-blur-sm rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="relative p-6">
+                  <div className="text-4xl font-bold gradient-text mb-2 group-hover:scale-110 transition-transform duration-300">
+                    {stat.value}
+                  </div>
+                  <div className="text-gray-500 text-sm font-medium">{stat.label}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========== 鍒嗙被瀵艰埅 - 绮捐嚧鍗＄墖 ========== */}
+      <section className="py-16 bg-gradient-to-b from-white/80 to-orange-50/50 backdrop-blur-sm">
+        <div className="container-wide">
+          {/* 鏍囬 */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-3 tracking-tight">鎺㈢储鍒嗙被</h2>
+            <p className="text-gray-500">鎵惧埌鏈€閫傚悎浣犵殑宸ュ叿绫诲瀷</p>
+          </div>
+          
+          {/* 鍒嗙被缃戞牸 */}
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+            {mainCategories.map((mainCat, index) => (
+              <Link
+                key={mainCat.id}
+                href={`/category/${mainCat.slug}`}
+                className="group relative"
+              >
+                <div className="card p-5 text-center h-full">
+                  {/* 鍥炬爣 */}
+                  <div className={`w-14 h-14 mx-auto mb-3 rounded-2xl bg-gradient-to-br ${mainCat.color} flex items-center justify-center shadow-md group-hover:shadow-lg group-hover:scale-110 transition-all duration-300`}>
+                    <span className="text-2xl">{mainCat.icon}</span>
+                  </div>
+                  
+                  {/* 鍚嶇О */}
+                  <div className="font-semibold text-gray-900 mb-1 group-hover:text-orange-600 transition-colors">
+                    {mainCat.name}
+                  </div>
+                  
+                  {/* 鏁伴噺 */}
+                  <div className="text-xs text-gray-400">
+                    {getCategoryCount(mainCat.category)} 涓伐鍏?                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========== 鐑棬宸ュ叿 ========== */}
+      <section className="py-16">
+        <div className="container-wide">
+          <div className="flex items-center justify-between mb-10">
+            <div>
+              <h2 className="text-3xl font-bold mb-2 tracking-tight">鐑棬宸ュ叿</h2>
+              <p className="text-gray-500">鏈€鍙楁杩庣殑鏁堢巼鍒╁櫒</p>
+            </div>
+            <Link href="/search?sort=popular" className="btn btn-ghost text-orange-600 hover:text-orange-700 group">
+              鏌ョ湅鍏ㄩ儴
+              <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {popularTools.map((tool, index) => (
+              <Link key={tool.id} href={`/tool/${tool.slug}`} className="group">
+                <div className="tool-card p-5 h-full">
+                  <div className="flex items-start space-x-4">
+                    {/* 鍥炬爣 */}
+                    <div className={`tool-card-icon bg-gradient-to-br ${categoryGradients[tool.category] || 'from-gray-400 to-gray-500'}`}>
+                      {categoryIcons[tool.category] || '馃敡'}
+                    </div>
+                    
+                    {/* 鍐呭 */}
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center space-x-2 mb-1">
+                        <h3 className="font-semibold text-gray-900 truncate group-hover:text-orange-600 transition-colors">
+                          {tool.name}
+                        </h3>
+                        {tool.featured && (
+                          <Sparkles size={14} className="text-orange-500 flex-shrink-0" />
+                        )}
+                      </div>
+                      <p className="text-sm text-gray-500 line-clamp-2 mb-3">
+                        {tool.description}
+                      </p>
+                      <div className="flex items-center space-x-2">
+                        <span className="text-xs text-gray-400">{tool.category}</span>
+                        {tool.price_type && (
+                          <>
+                            <span className="text-gray-300">鈥?/span>
+                            <span className="text-xs text-gray-500">{priceLabels[tool.price_type]}</span>
+                          </>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========== 椤佃剼 ========== */}
+      <footer className="relative mt-20">
+        {/* 娓愬彉鑳屾櫙鍗＄墖 */}
+        <div className="absolute inset-0 gradient-mesh opacity-50"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-orange-50/30 to-white/50"></div>
+        
+        {/* 鍐呭鍖?*/}
+        <div className="relative py-12 border-t border-gray-100">
+          <div className="container-wide">
+            {/* 涓婇儴鍒嗭細4 鍒楀竷灞€ */}
+            <div className="grid md:grid-cols-4 gap-6 mb-6">
+              {/* 鍝佺墝淇℃伅 */}
+              <div className="card p-6 glass">
+                <div className="flex items-center space-x-2 mb-3">
+                  <div className="w-8 h-8 gradient-primary rounded-xl shadow-lg flex items-center justify-center">
+                    <span className="text-white text-lg">馃尠</span>
+                  </div>
+                  <span className="font-bold text-gray-900 text-base">鏉炬灉宸ュ叿绠?/span>
+                </div>
+                <p className="text-xs text-gray-600 leading-relaxed mb-4">
+                  绮鹃€?510+ 浼樿川宸ュ叿锛屼竴绔欏紡瑙ｅ喅宸ヤ綔鐢熸椿闇€姹?                </p>
+                <div className="flex items-center space-x-2 text-xs text-gray-500">
+                  <span className="px-2 py-1 bg-orange-50 rounded-full">馃弳 涓撲笟绮鹃€?/span>
+                  <span className="px-2 py-1 bg-blue-50 rounded-full">鈿?姣忔棩鏇存柊</span>
+                </div>
+              </div>
+
+              {/* 蹇€熼摼鎺?*/}
+              <div className="card p-6 glass">
+                <h4 className="font-bold text-gray-900 mb-4 text-sm flex items-center">
+                  <span className="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2"></span>
+                  蹇€熼摼鎺?                </h4>
+                <ul className="space-y-2 text-xs">
+                  <li><Link href="/category/ai-gongju" className="text-gray-500 hover:text-orange-600 transition-colors flex items-center"><span className="w-1 h-1 bg-gray-300 rounded-full mr-2"></span>AI 宸ュ叿</Link></li>
+                  <li><Link href="/category/xiaolv-bangong" className="text-gray-500 hover:text-orange-600 transition-colors flex items-center"><span className="w-1 h-1 bg-gray-300 rounded-full mr-2"></span>鏁堢巼鍔炲叕</Link></li>
+                  <li><Link href="/category/ai-sheji" className="text-gray-500 hover:text-orange-600 transition-colors flex items-center"><span className="w-1 h-1 bg-gray-300 rounded-full mr-2"></span>AI 璁捐</Link></li>
+                  <li><Link href="/search" className="text-gray-500 hover:text-orange-600 transition-colors flex items-center"><span className="w-1 h-1 bg-gray-300 rounded-full mr-2"></span>鍏ㄩ儴宸ュ叿</Link></li>
+                </ul>
+              </div>
+
+              {/* 娉曞緥淇℃伅 */}
+              <div className="card p-6 glass">
+                <h4 className="font-bold text-gray-900 mb-4 text-sm flex items-center">
+                  <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+                  娉曞緥淇℃伅
+                </h4>
+                <ul className="space-y-2 text-xs">
+                  <li><Link href="/terms" className="text-gray-500 hover:text-orange-600 transition-colors flex items-center"><span className="w-1 h-1 bg-gray-300 rounded-full mr-2"></span>鐢ㄦ埛鍗忚</Link></li>
+                  <li><Link href="/privacy" className="text-gray-500 hover:text-orange-600 transition-colors flex items-center"><span className="w-1 h-1 bg-gray-300 rounded-full mr-2"></span>闅愮鏀跨瓥</Link></li>
+                  <li><Link href="/disclaimer" className="text-gray-500 hover:text-orange-600 transition-colors flex items-center"><span className="w-1 h-1 bg-gray-300 rounded-full mr-2"></span>鍏嶈矗澹版槑</Link></li>
+                </ul>
+              </div>
+
+              {/* 鍙嬫儏閾炬帴 */}
+              <div className="card p-6 glass">
+                <h4 className="font-bold text-gray-900 mb-4 text-sm flex items-center">
+                  <span className="w-1.5 h-1.5 bg-green-500 rounded-full mr-2"></span>
+                  鍙嬫儏閾炬帴
+                </h4>
+                <ul className="space-y-2 text-xs">
+                  <li><a href="https://clawhub.ai" target="_blank" rel="noopener" className="text-gray-500 hover:text-orange-600 transition-colors flex items-center"><span className="w-1 h-1 bg-gray-300 rounded-full mr-2"></span>ClawHub</a></li>
+                  <li><a href="https://openclaw.ai" target="_blank" rel="noopener" className="text-gray-500 hover:text-orange-600 transition-colors flex items-center"><span className="w-1 h-1 bg-gray-300 rounded-full mr-2"></span>OpenClaw</a></li>
+                  <li><a href="https://supabase.com" target="_blank" rel="noopener" className="text-gray-500 hover:text-orange-600 transition-colors flex items-center"><span className="w-1 h-1 bg-gray-300 rounded-full mr-2"></span>Supabase</a></li>
+                  <li><a href="https://vercel.com" target="_blank" rel="noopener" className="text-gray-500 hover:text-orange-600 transition-colors flex items-center"><span className="w-1 h-1 bg-gray-300 rounded-full mr-2"></span>Vercel</a></li>
+                </ul>
+              </div>
+            </div>
+
+            {/* 涓嬮儴鍒嗭細鐗堟潈鍜屽妗?*/}
+            <div className="pt-6 border-t border-gray-100/50">
+              <div className="flex flex-col md:flex-row justify-between items-center space-y-3 md:space-y-0">
+                <div className="text-xs text-gray-500">
+                  漏 2026 鏉炬灉宸ュ叿绠便€侫ll rights reserved.
+                </div>
+                <div className="flex items-center space-x-4 text-xs text-gray-500">
+                  <a href="https://beian.miit.gov.cn" target="_blank" rel="noopener" className="hover:text-orange-600 transition-colors flex items-center">
+                    <span className="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2"></span>
+                    鐨?ICP 澶?2021005484 鍙?-3
+                  </a>
+                  <span className="text-gray-300">鈥?/span>
+                  <a href="mailto:1335979521@qq.com" className="hover:text-orange-600 transition-colors flex items-center">
+                    <Mail size={12} className="mr-1" />
+                    1335979521@qq.com
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
+

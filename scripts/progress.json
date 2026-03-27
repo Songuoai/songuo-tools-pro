@@ -1,0 +1,32 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-03-24T12:02:18.949Z",
+  "phase": "Phase 1: 学习 + 初始化",
+  "overallProgress": {
+    "percentage": 0,
+    "startDate": "2026-03-24",
+    "targetDate": "2026-05-19",
+    "currentWeek": 1,
+    "totalWeeks": 12
+  },
+  "learning": {
+    "currentTopic": "",
+    "completedTopics": [],
+    "nextTopic": "",
+    "learningLogs": []
+  },
+  "development": {
+    "completedFeatures": [],
+    "inProgressFeatures": [],
+    "pendingFeatures": []
+  },
+  "issues": {
+    "open": [],
+    "resolved": []
+  },
+  "checkpoints": {
+    "lastCheckpoint": "2026-03-24T12:02:18.949Z",
+    "nextCheckpoint": "2026-03-31T12:02:18.949Z",
+    "checkpointProgress": ""
+  }
+}

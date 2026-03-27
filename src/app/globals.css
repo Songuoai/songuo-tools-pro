@@ -1,0 +1,532 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===================================
+   松果工具�?Pro - 国际大师级设计系�?   灵感来源：Apple、Linear、Vercel、Stripe
+   =================================== */
+
+@layer base {
+  :root {
+    /* 主色�?- 温暖活力�?*/
+    --primary: 25 95% 53%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* 中性色 - 高级灰阶 */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    
+    /* 卡片与表�?*/
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --surface: 222 47% 98%;
+    
+    /* 边框与分割线 */
+    --border: 222 47% 91%;
+    --input: 222 47% 91%;
+    
+    /* 状态色 */
+    --success: 142 76% 36%;
+    --warning: 38 92% 50%;
+    --error: 0 84% 60%;
+    --info: 217 91% 60%;
+    
+    /* 渐变 */
+    --gradient-primary: linear-gradient(135deg, hsl(25 95% 53%), hsl(35 95% 55%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(222 47% 98%));
+    --gradient-glow: linear-gradient(135deg, hsl(25 95% 60% / 0.15), hsl(35 95% 60% / 0.05));
+    
+    /* 阴影系统 - 5 层深�?*/
+    --shadow-xs: 0 1px 2px 0 hsl(222 47% 11% / 0.05);
+    --shadow-sm: 0 1px 3px 0 hsl(222 47% 11% / 0.1), 0 1px 2px -1px hsl(222 47% 11% / 0.1);
+    --shadow-md: 0 4px 6px -1px hsl(222 47% 11% / 0.1), 0 2px 4px -2px hsl(222 47% 11% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(222 47% 11% / 0.1), 0 4px 6px -4px hsl(222 47% 11% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(222 47% 11% / 0.1), 0 8px 10px -6px hsl(222 47% 11% / 0.1);
+    --shadow-2xl: 0 25px 50px -12px hsl(222 47% 11% / 0.25);
+    --shadow-glow: 0 0 40px hsl(25 95% 53% / 0.3);
+    
+    /* 圆角系统 */
+    --radius-sm: 0.375rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    --radius-2xl: 1.5rem;
+    --radius-full: 9999px;
+    
+    /* 间距基准 */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.25rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-10: 2.5rem;
+    --space-12: 3rem;
+    --space-16: 4rem;
+    
+    /* 字体大小 - 精确排版 */
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.875rem;
+    --text-4xl: 2.25rem;
+    --text-5xl: 3rem;
+    
+    /* 字间距优�?*/
+    --tracking-tighter: -0.05em;
+    --tracking-tight: -0.025em;
+    --tracking-normal: 0em;
+    --tracking-wide: 0.025em;
+    --tracking-wider: 0.05em;
+    
+    /* 行高优化 */
+    --leading-none: 1;
+    --leading-tight: 1.25;
+    --leading-snug: 1.375;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.625;
+    --leading-loose: 2;
+    
+    /* 动画曲线 - 高级缓动 */
+    --ease-out: cubic-bezier(0.19, 1, 0.22, 1);
+    --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+    --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    /* 过渡时间 */
+    --duration-fast: 150ms;
+    --duration-normal: 300ms;
+    --duration-slow: 500ms;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-feature-settings: "cv11", "ss01";
+    font-variation-settings: "opsz" 840;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Noto Sans SC", sans-serif;
+    font-size: var(--text-base);
+    line-height: var(--leading-normal);
+    letter-spacing: var(--tracking-normal);
+  }
+  
+  /* 优化选中文本 */
+  ::selection {
+    background-color: hsl(25 95% 53% / 0.2);
+    color: inherit;
+  }
+}
+
+/* ===================================
+   排版系统 - Typography
+   =================================== */
+
+@layer components {
+  .text-display {
+    font-size: var(--text-5xl);
+    font-weight: 700;
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-tighter);
+  }
+  
+  .text-heading-1 {
+    font-size: var(--text-4xl);
+    font-weight: 700;
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-tight);
+  }
+  
+  .text-heading-2 {
+    font-size: var(--text-3xl);
+    font-weight: 600;
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-tight);
+  }
+  
+  .text-heading-3 {
+    font-size: var(--text-2xl);
+    font-weight: 600;
+    line-height: var(--leading-snug);
+  }
+  
+  .text-body {
+    font-size: var(--text-base);
+    font-weight: 400;
+    line-height: var(--leading-normal);
+  }
+  
+  .text-body-sm {
+    font-size: var(--text-sm);
+    font-weight: 400;
+    line-height: var(--leading-normal);
+  }
+  
+  .text-caption {
+    font-size: var(--text-xs);
+    font-weight: 500;
+    line-height: var(--leading-normal);
+    letter-spacing: var(--tracking-wide);
+    text-transform: uppercase;
+  }
+}
+
+/* ===================================
+   卡片系统 - Cards
+   =================================== */
+
+@layer components {
+  .card {
+    @apply bg-card rounded-xl shadow-sm;
+    border: 1px solid var(--border);
+    transition: all var(--duration-normal) var(--ease-out);
+  }
+  
+  .card:hover {
+    @apply shadow-lg;
+    transform: translateY(-2px);
+    border-color: hsl(25 95% 53% / 0.3);
+  }
+  
+  .card-glass {
+    @apply bg-white/80 backdrop-blur-xl;
+    border: 1px solid hsl(222 47% 91% / 0.5);
+    box-shadow: var(--shadow-lg);
+  }
+}
+
+/* ===================================
+   按钮系统 - Buttons
+   =================================== */
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center;
+    @apply font-medium;
+    @apply rounded-lg;
+    @apply transition-all duration-300;
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-orange-500 to-orange-600;
+    @apply text-white;
+    @apply shadow-md hover:shadow-lg;
+  }
+  
+  .btn-primary:hover {
+    @apply from-orange-600 to-orange-700;
+    transform: translateY(-1px);
+  }
+  
+  .btn-secondary {
+    @apply bg-white border border-gray-200;
+    @apply text-gray-700;
+    @apply hover:bg-gray-50;
+  }
+  
+  .btn-ghost {
+    @apply bg-transparent;
+    @apply text-gray-600;
+    @apply hover:bg-gray-100;
+  }
+}
+
+/* ===================================
+   渐变系统 - Gradients
+   =================================== */
+
+@layer utilities {
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(25 95% 53%), hsl(35 95% 55%));
+  }
+  
+  .gradient-subtle {
+    background: linear-gradient(180deg, hsl(0 0% 100%), hsl(222 47% 98%));
+  }
+  
+  .gradient-mesh {
+    background: 
+      radial-gradient(at 40% 20%, hsl(25 95% 60% / 0.15) 0px, transparent 50%),
+      radial-gradient(at 80% 0%, hsl(35 95% 60% / 0.15) 0px, transparent 50%),
+      radial-gradient(at 0% 50%, hsl(222 91% 60% / 0.1) 0px, transparent 50%),
+      radial-gradient(at 80% 50%, hsl(142 76% 36% / 0.1) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, hsl(25 95% 60% / 0.15) 0px, transparent 50%);
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-orange-600 via-amber-600 to-orange-600;
+    @apply bg-clip-text text-transparent;
+    background-size: 200% auto;
+    animation: gradient 3s ease infinite;
+  }
+}
+
+/* ===================================
+   动画系统 - Animations
+   =================================== */
+
+@layer utilities {
+  /* 渐变流动 */
+  @keyframes gradient {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  .animate-gradient {
+    animation: gradient 3s ease infinite;
+  }
+  
+  /* 性能优化：减少重绘 */
+  * {
+    will-change: auto;
+  }
+  
+  .tool-card,
+  .card,
+  .btn {
+    will-change: transform, box-shadow;
+  }
+  
+  /* 浮动 */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+  
+  /* 脉冲光晕 */
+  @keyframes pulse-glow {
+    0%, 100% {
+      opacity: 0.5;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+  }
+  
+  .animate-pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+  
+  /* 淡入 */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 0.6s var(--ease-out) forwards;
+  }
+  
+  /* 缩放进入 */
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .animate-scale-in {
+    animation: scale-in 0.4s var(--ease-out) forwards;
+  }
+  
+  /* 滑动进入 */
+  @keyframes slide-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .animate-slide-in-right {
+    animation: slide-in-right 0.5s var(--ease-out) forwards;
+  }
+  
+  /* 旋转 */
+  @keyframes spin-slow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .animate-spin-slow {
+    animation: spin-slow 8s linear infinite;
+  }
+}
+
+/* ===================================
+   滚动条美�?- Scrollbar
+   =================================== */
+
+@layer base {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+    border-radius: var(--radius-full);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-300;
+    border-radius: var(--radius-full);
+    transition: background-color 0.2s;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400;
+  }
+  
+  ::-webkit-scrollbar-corner {
+    @apply bg-transparent;
+  }
+}
+
+/* ===================================
+   焦点�?- Focus Ring
+   =================================== */
+
+@layer utilities {
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2;
+    @apply focus:ring-offset-white;
+  }
+  
+  .focus-ring-inset {
+    @apply focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-inset;
+  }
+}
+
+/* ===================================
+   玻璃�?- Glassmorphism
+   =================================== */
+
+@layer utilities {
+  .glass {
+    @apply bg-white/80 backdrop-blur-xl;
+    border: 1px solid hsl(222 47% 91% / 0.5);
+  }
+  
+  .glass-dark {
+    @apply bg-black/40 backdrop-blur-xl;
+    border: 1px solid hsl(222 47% 11% / 0.2);
+  }
+}
+
+/* ===================================
+   工具卡片特效 - Tool Card Effects
+   =================================== */
+
+@layer components {
+  .tool-card {
+    @apply relative overflow-hidden;
+    @apply bg-white rounded-xl;
+    @apply border border-gray-100;
+    @apply shadow-sm;
+    transition: all 0.3s var(--ease-out);
+  }
+  
+  .tool-card::before {
+    content: '';
+    @apply absolute inset-0;
+    @apply bg-gradient-to-br from-orange-500/0 to-orange-500/0;
+    transition: all 0.3s var(--ease-out);
+  }
+  
+  .tool-card:hover {
+    @apply shadow-xl;
+    transform: translateY(-4px);
+    border-color: hsl(25 95% 53% / 0.3);
+  }
+  
+  .tool-card:hover::before {
+    @apply from-orange-500/5 to-orange-500/10;
+  }
+  
+  .tool-card-icon {
+    @apply w-12 h-12 rounded-xl;
+    @apply flex items-center justify-center;
+    @apply text-2xl;
+    @apply shadow-md;
+    transition: all 0.3s var(--ease-out);
+  }
+  
+  .tool-card:hover .tool-card-icon {
+    transform: scale(1.1) rotate(5deg);
+  }
+}
+
+/* ===================================
+   响应式断点工具类
+   =================================== */
+
+@layer utilities {
+  .container-prose {
+    @apply max-w-3xl mx-auto;
+    @apply px-4 sm:px-6;
+  }
+  
+  .container-wide {
+    @apply max-w-7xl mx-auto;
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* ===================================
+   打印样式
+   =================================== */
+
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-03-24T19:45:00+08:00",
+  "phase": "Phase 1: 学习 + 初始化",
+  "overallProgress": {
+    "percentage": 5,
+    "startDate": "2026-03-24",
+    "targetDate": "2026-05-19",
+    "currentWeek": 1,
+    "totalWeeks": 12
+  },
+  "learning": {
+    "currentTopic": "HTML5 基础",
+    "completedTopics": ["项目初始化"],
+    "nextTopic": "CSS3 基础",
+    "learningLogs": ["2026-03-24"]
+  },
+  "development": {
+    "completedFeatures": [
+      {
+        "id": "init-001",
+        "name": "项目初始化",
+        "category": "基础设施",
+        "completedAt": "2026-03-24T19:30:00+08:00",
+        "status": "done",
+        "tested": true,
+        "notes": "Next.js 14 + TypeScript + Tailwind CSS 配置完成，项目结构创建完成"
+      }
+    ],
+    "inProgressFeatures": [
+      {
+        "id": "dev-001",
+        "name": "首页开发",
+        "category": "前台功能",
+        "startedAt": "2026-03-24T19:40:00+08:00",
+        "status": "in-progress",
+        "progress": 10,
+        "nextStep": "学习 HTML/CSS 基础"
+      }
+    ],
+    "pendingFeatures": [
+      {
+        "id": "dev-002",
+        "name": "工具列表页",
+        "category": "前台功能",
+        "priority": "high",
+        "estimatedStart": "2026-04-01"
+      },
+      {
+        "id": "dev-003",
+        "name": "工具详情页",
+        "category": "前台功能",
+        "priority": "high",
+        "estimatedStart": "2026-04-05"
+      },
+      {
+        "id": "dev-004",
+        "name": "搜索功能",
+        "category": "核心功能",
+        "priority": "high",
+        "estimatedStart": "2026-04-10"
+      }
+    ]
+  },
+  "issues": {
+    "open": [],
+    "resolved": []
+  },
+  "checkpoints": {
+    "lastCheckpoint": "2026-03-24T19:45:00+08:00",
+    "nextCheckpoint": "2026-03-31T23:59:59+08:00",
+    "checkpointProgress": "Week 1: 项目初始化完成，开始学习 HTML/CSS"
+  }
+}
