@@ -82,7 +82,7 @@ export default function HomePage() {
           </div>
           
           <h1 className="text-5xl md:text-6xl font-bold mb-6 gradient-text">
-            精选 510+ 优质工具
+            精选 170+ 优质工具
           </h1>
           
           <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
