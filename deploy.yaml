@@ -1,0 +1,32 @@
+version: 1.0
+kind: Deploy
+
+input:
+  type: CloudSource
+  params:
+    source:
+      type: GitSource
+      params:
+        url: https://github.com/Songuoai/songuo-tools-pro.git
+        branch: main
+        depth: 1
+
+build:
+  commands:
+    - npm install
+    - npm run build
+  artifacts:
+    - .next
+  environment:
+    NODE_VERSION: 18
+
+deploy:
+  type: FunctionCompute
+  params:
+    regionId: cn-hangzhou
+    serviceName: songuo-tools
+    functionName: web
+    runtime: nodejs18
+    handler: index.handler
+    memorySize: 512
+    timeout: 30

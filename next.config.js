@@ -15,7 +15,6 @@ const nextConfig = {
   // 优化配置
   reactStrictMode: false,
   poweredByHeader: false,
-  // 固定端口
   experimental: {
     serverActions: {
       bodySizeLimit: '2mb',
