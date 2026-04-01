@@ -1,0 +1,112 @@
+[
+  {
+    "id": 30,
+    "name": "阳光电影网",
+    "url": "https://www.ygdy8.com",
+    "logoUrl": "",
+    "category": "影视资源",
+    "priceType": "free",
+    "shortDesc": "免费电影天堂",
+    "description": "阳光电影网 - 最新电影下载",
+    "tags": [
+      "电影",
+      "免费"
+    ],
+    "status": "fail",
+    "views": 1000,
+    "rating": 3.9,
+    "_fixed": true,
+    "error": "getaddrinfo ENOENT www.ygdy8.com"
+  },
+  {
+    "id": 31,
+    "name": "MP4 电影",
+    "url": "https://www.mp4kan.com",
+    "logoUrl": "",
+    "category": "影视资源",
+    "priceType": "free",
+    "shortDesc": "MP4 格式电影下载",
+    "description": "MP4 电影网 - 高清电影下载",
+    "tags": [
+      "电影",
+      "MP4"
+    ],
+    "status": "timeout",
+    "views": 900,
+    "rating": 3.8,
+    "_fixed": true
+  },
+  {
+    "id": 32,
+    "name": "看片狂人",
+    "url": "https://www.kpkuang.com",
+    "logoUrl": "",
+    "category": "影视资源",
+    "priceType": "free",
+    "shortDesc": "在线视频播放",
+    "description": "看片狂人 - 免费在线观影",
+    "tags": [
+      "影视",
+      "播放"
+    ],
+    "status": "timeout",
+    "views": 850,
+    "rating": 3.7,
+    "_fixed": true
+  },
+  {
+    "id": 36,
+    "name": "动漫岛",
+    "url": "https://www.dmd84.com",
+    "logoUrl": "",
+    "category": "影视资源",
+    "priceType": "free",
+    "shortDesc": "动漫资源网站",
+    "description": "动漫岛 - 在线动漫观看",
+    "tags": [
+      "动漫",
+      "资源"
+    ],
+    "status": "fail",
+    "views": 650,
+    "rating": 3.3,
+    "_fixed": true,
+    "error": "getaddrinfo ENOTFOUND www.dmd84.com"
+  },
+  {
+    "id": 38,
+    "name": "蘑菇影视",
+    "url": "https://www.moguys.com",
+    "logoUrl": "",
+    "category": "影视资源",
+    "priceType": "free",
+    "shortDesc": "免费影视平台",
+    "description": "蘑菇影视 - 免费影视观看",
+    "tags": [
+      "影视",
+      "免费"
+    ],
+    "status": "timeout",
+    "views": 550,
+    "rating": 3.1,
+    "_fixed": true
+  },
+  {
+    "id": 39,
+    "name": "高清拉",
+    "url": "https://gaoqing.la",
+    "logoUrl": "",
+    "category": "影视资源",
+    "priceType": "free",
+    "shortDesc": "高清电影下载",
+    "description": "高清拉 - 高清电影下载",
+    "tags": [
+      "电影",
+      "高清"
+    ],
+    "status": "timeout",
+    "views": 500,
+    "rating": 3,
+    "_fixed": true
+  }
+]

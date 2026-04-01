@@ -1,0 +1,687 @@
+[
+  {
+    "id": 3,
+    "name": "Gemini",
+    "url": "https://gemini.google.com",
+    "logoUrl": "https://cdn.worldvectorlogo.com/logos/google-gemini.svg",
+    "category": "AI 工具",
+    "priceType": "free",
+    "shortDesc": "Google 的多模态 AI 模型",
+    "description": "Gemini 是 Google 开发的多模态 AI 模型，能够理解文本、图像、代码等多种输入。",
+    "tags": [
+      "AI",
+      "Google",
+      "多模态"
+    ],
+    "status": "timeout",
+    "views": 856,
+    "rating": 4.7
+  },
+  {
+    "id": 4,
+    "name": "Copilot",
+    "url": "https://copilot.microsoft.com",
+    "logoUrl": "https://cdn.worldvectorlogo.com/logos/microsoft-copilot.svg",
+    "category": "AI 工具",
+    "priceType": "freemium",
+    "shortDesc": "Microsoft AI 助手",
+    "description": "Microsoft Copilot 是微软开发的 AI 助手，集成在 Windows、Office 等产品中。",
+    "tags": [
+      "AI",
+      "Microsoft",
+      "办公"
+    ],
+    "status": "fail",
+    "views": 742,
+    "rating": 4.6,
+    "error": "read ECONNRESET"
+  },
+  {
+    "id": 5,
+    "name": "Perplexity",
+    "url": "https://perplexity.ai",
+    "logoUrl": "https://cdn.worldvectorlogo.com/logos/perplexity-ai.svg",
+    "category": "AI 工具",
+    "priceType": "freemium",
+    "shortDesc": "AI 驱动的搜索引擎",
+    "description": "Perplexity AI 是 AI 驱动的搜索引擎，结合传统搜索和大语言模型。",
+    "tags": [
+      "AI",
+      "搜索",
+      "研究"
+    ],
+    "status": "timeout",
+    "views": 689,
+    "rating": 4.7
+  },
+  {
+    "id": 6,
+    "name": "Character.ai",
+    "url": "https://character.ai",
+    "logoUrl": "https://cdn.worldvectorlogo.com/logos/character-ai.svg",
+    "category": "AI 工具",
+    "priceType": "freemium",
+    "shortDesc": "创建和对话 AI 角色",
+    "description": "Character.ai 允许用户创建自定义 AI 角色并与之对话。",
+    "tags": [
+      "AI",
+      "娱乐",
+      "对话"
+    ],
+    "status": "timeout",
+    "views": 623,
+    "rating": 4.5
+  },
+  {
+    "id": 7,
+    "name": "Poe",
+    "url": "https://poe.com",
+    "logoUrl": "https://cdn.worldvectorlogo.com/logos/poe-ai.svg",
+    "category": "AI 工具",
+    "priceType": "freemium",
+    "shortDesc": "多合一 AI 聊天平台",
+    "description": "Poe 是 Quora 开发的多合一 AI 聊天平台，集成多个 AI 模型。",
+    "tags": [
+      "AI",
+      "聚合",
+      "对话"
+    ],
+    "status": "timeout",
+    "views": 589,
+    "rating": 4.6
+  },
+  {
+    "id": 8,
+    "name": "You.com",
+    "url": "https://you.com",
+    "logoUrl": "https://cdn.worldvectorlogo.com/logos/you-com.svg",
+    "category": "AI 工具",
+    "priceType": "freemium",
+    "shortDesc": "AI 搜索引擎",
+    "description": "You.com 是 AI 驱动的搜索引擎，提供个性化搜索结果。",
+    "tags": [
+      "AI",
+      "搜索",
+      "隐私"
+    ],
+    "status": "timeout",
+    "views": 512,
+    "rating": 4.4
+  },
+  {
+    "id": 25,
+    "name": "HD 茉莉",
+    "url": "https://hdmoji.org",
+    "logoUrl": "",
+    "category": "影视资源",
+    "priceType": "free",
+    "shortDesc": "高清电影资源",
+    "description": "HD 茉莉提供高清电影资源下载和在线观看。",
+    "tags": [
+      "电影",
+      "高清"
+    ],
+    "status": "fail",
+    "views": 1500,
+    "rating": 4.4,
+    "error": "getaddrinfo ENOTFOUND hdmoji.org"
+  },
+  {
+    "id": 28,
+    "name": "NovoplN",
+    "url": "https://novopln.com",
+    "logoUrl": "",
+    "category": "影视资源",
+    "priceType": "free",
+    "shortDesc": "在线影视播放",
+    "description": "NovoplN 提供在线影视播放服务。",
+    "tags": [
+      "影视",
+      "播放"
+    ],
+    "status": "fail",
+    "views": 1200,
+    "rating": 4.1,
+    "error": "getaddrinfo ENOTFOUND novopln.com"
+  },
+  {
+    "id": 29,
+    "name": "电影港",
+    "url": "https://dygangs.com",
+    "logoUrl": "",
+    "category": "影视资源",
+    "priceType": "free",
+    "shortDesc": "免费电影下载",
+    "description": "电影港提供免费电影下载服务。",
+    "tags": [
+      "电影",
+      "下载"
+    ],
+    "status": "fail",
+    "views": 1100,
+    "rating": 4,
+    "error": "getaddrinfo ENOTFOUND dygangs.com"
+  },
+  {
+    "id": 30,
+    "name": "阳光电影网",
+    "url": "https://ygydy8.com",
+    "logoUrl": "",
+    "category": "影视资源",
+    "priceType": "free",
+    "shortDesc": "免费电影天堂",
+    "description": "阳光电影网提供免费电影在线观看。",
+    "tags": [
+      "电影",
+      "免费"
+    ],
+    "status": "fail",
+    "views": 1000,
+    "rating": 3.9,
+    "error": "getaddrinfo ENOTFOUND ygydy8.com"
+  },
+  {
+    "id": 31,
+    "name": "MP4 电影",
+    "url": "https://mp4pa.com",
+    "logoUrl": "",
+    "category": "影视资源",
+    "priceType": "free",
+    "shortDesc": "MP4 格式电影下载",
+    "description": "MP4 电影提供 MP4 格式电影下载服务。",
+    "tags": [
+      "电影",
+      "MP4"
+    ],
+    "status": "fail",
+    "views": 900,
+    "rating": 3.8,
+    "error": "Hostname/IP does not match certificate's altnames: Host: mp4pa.com. is not in the cert's altnames: DNS:2021.xn--9kqs58iq4c.xyz"
+  },
+  {
+    "id": 32,
+    "name": "看片狂人",
+    "url": "https://kpkuang.com",
+    "logoUrl": "",
+    "category": "影视资源",
+    "priceType": "free",
+    "shortDesc": "在线视频播放",
+    "description": "看片狂人提供在线视频播放服务。",
+    "tags": [
+      "影视",
+      "播放"
+    ],
+    "status": "timeout",
+    "views": 850,
+    "rating": 3.7
+  },
+  {
+    "id": 36,
+    "name": "动漫岛",
+    "url": "https://dmand5.com",
+    "logoUrl": "",
+    "category": "影视资源",
+    "priceType": "free",
+    "shortDesc": "动漫资源网站",
+    "description": "动漫岛提供动漫资源在线观看。",
+    "tags": [
+      "动漫",
+      "资源"
+    ],
+    "status": "fail",
+    "views": 650,
+    "rating": 3.3,
+    "error": "getaddrinfo EAI_AGAIN dmand5.com"
+  },
+  {
+    "id": 37,
+    "name": "2333 动漫",
+    "url": "https://2333dm.com",
+    "logoUrl": "",
+    "category": "影视资源",
+    "priceType": "free",
+    "shortDesc": "动漫在线观看",
+    "description": "2333 动漫提供动漫在线观看服务。",
+    "tags": [
+      "动漫",
+      "观看"
+    ],
+    "status": "fail",
+    "views": 600,
+    "rating": 3.2,
+    "error": "getaddrinfo ENOTFOUND 2333dm.com"
+  },
+  {
+    "id": 38,
+    "name": "蘑菇影视",
+    "url": "https://mgslb.com",
+    "logoUrl": "",
+    "category": "影视资源",
+    "priceType": "free",
+    "shortDesc": "免费影视平台",
+    "description": "蘑菇影视提供免费影视平台服务。",
+    "tags": [
+      "影视",
+      "免费"
+    ],
+    "status": "fail",
+    "views": 550,
+    "rating": 3.1,
+    "error": "getaddrinfo ENOTFOUND mgslb.com"
+  },
+  {
+    "id": 39,
+    "name": "高清拉",
+    "url": "https://gaoqing.la",
+    "logoUrl": "",
+    "category": "影视资源",
+    "priceType": "free",
+    "shortDesc": "高清电影下载",
+    "description": "高清拉提供高清电影下载服务。",
+    "tags": [
+      "电影",
+      "高清"
+    ],
+    "status": "timeout",
+    "views": 500,
+    "rating": 3
+  },
+  {
+    "id": 18,
+    "name": "Midjourney",
+    "url": "https://www.midjourney.com",
+    "logoUrl": "",
+    "category": "AI 设计",
+    "priceType": "paid",
+    "shortDesc": "AI 图像生成工具，通过 Discord 操作",
+    "description": "Midjourney 是一款 AI 图像生成工具，用户通过 Discord 机器人操作，输入文字描述即可生成高质量图像。",
+    "tags": [
+      "AI",
+      "设计",
+      "图像生成"
+    ],
+    "status": "fail",
+    "views": 2200,
+    "rating": 4.9,
+    "statusCode": 403
+  },
+  {
+    "id": 19,
+    "name": "Canva 可画",
+    "url": "https://www.canva.com",
+    "logoUrl": "",
+    "category": "AI 设计",
+    "priceType": "freemium",
+    "shortDesc": "在线设计工具，海量模板素材",
+    "description": "Canva 是一款在线设计工具，提供海量模板、素材、字体等，支持海报、社交媒体图片、演示文稿等设计。",
+    "tags": [
+      "设计",
+      "在线",
+      "模板"
+    ],
+    "status": "fail",
+    "views": 1900,
+    "rating": 4.7,
+    "statusCode": 403
+  },
+  {
+    "id": 51,
+    "name": "证件照在线生成",
+    "slug": "zhengjianzhao-online",
+    "url": "https://id.photofunia.com",
+    "logoUrl": "",
+    "category": "实用工具",
+    "priceType": "free",
+    "shortDesc": "自动生成不同规格证件照，支持换底色",
+    "description": "证件照在线生成（免登录版），自动生成不同规格证件照，支持换底色，免费下载基础版，无需登录。",
+    "tags": [
+      "证件照",
+      "在线生成",
+      "免登录"
+    ],
+    "status": "fail",
+    "views": 2800,
+    "rating": 4.6,
+    "error": "getaddrinfo ENOTFOUND id.photofunia.com"
+  },
+  {
+    "id": 55,
+    "name": "Kapwing",
+    "url": "https://www.kapwing.com",
+    "logoUrl": "",
+    "category": "实用工具",
+    "priceType": "freemium",
+    "shortDesc": "免费音频拼接、剪辑、去噪",
+    "description": "Kapwing 提供免费音频拼接、剪辑、去噪，导出带小水印但可手动去除，无需登录即可编辑。",
+    "tags": [
+      "剪辑",
+      "音频"
+    ],
+    "status": "timeout",
+    "views": 1200,
+    "rating": 3.9
+  },
+  {
+    "id": 61,
+    "name": "Google Docs",
+    "slug": "google-docs",
+    "url": "https://docs.google.com",
+    "logoUrl": "https://cdn.worldvectorlogo.com/logos/google-docs.svg",
+    "category": "实用工具",
+    "priceType": "free",
+    "shortDesc": "免费在线编辑 Word/Excel",
+    "description": "Google Docs 提供免费在线文档编辑，支持 Word/Excel 在线编辑和导出 PDF，无需登录可查看基础内容，编辑需登录。",
+    "tags": [
+      "文档",
+      "编辑",
+      "在线办公"
+    ],
+    "status": "timeout",
+    "views": 3000,
+    "rating": 4.6
+  },
+  {
+    "id": 64,
+    "name": "ChatGPT",
+    "url": "https://chat.openai.com",
+    "logoUrl": "",
+    "category": "AI 工具",
+    "priceType": "freemium",
+    "shortDesc": "OpenAI 开发的 AI 对话助手，智能聊天、写作、编程",
+    "description": "ChatGPT 是 OpenAI 开发的大型语言模型，能够进行自然对话、回答问题、创作文字、编程辅助等。",
+    "tags": [
+      "AI",
+      "对话"
+    ],
+    "status": "fail",
+    "views": 5000,
+    "rating": 4.9,
+    "error": "read ECONNRESET"
+  },
+  {
+    "id": 66,
+    "name": "Gemini",
+    "url": "https://gemini.google.com",
+    "logoUrl": "",
+    "category": "AI 工具",
+    "priceType": "free",
+    "shortDesc": "Google 的多模态 AI 模型，完全免费",
+    "description": "Gemini 是 Google 开发的多模态 AI 模型，能够理解文本、图像、代码等多种输入。",
+    "tags": [
+      "AI",
+      "Google"
+    ],
+    "status": "timeout",
+    "views": 4000,
+    "rating": 4.7
+  },
+  {
+    "id": 67,
+    "name": "Copilot",
+    "url": "https://copilot.microsoft.com",
+    "logoUrl": "",
+    "category": "AI 工具",
+    "priceType": "freemium",
+    "shortDesc": "Microsoft AI 助手，集成 GPT-4",
+    "description": "Microsoft Copilot 是微软开发的 AI 助手，集成 GPT-4，支持联网搜索。",
+    "tags": [
+      "AI",
+      "Microsoft"
+    ],
+    "status": "fail",
+    "views": 3800,
+    "rating": 4.6,
+    "error": "read ECONNRESET"
+  },
+  {
+    "id": 68,
+    "name": "Perplexity",
+    "url": "https://perplexity.ai",
+    "logoUrl": "",
+    "category": "AI 工具",
+    "priceType": "freemium",
+    "shortDesc": "AI 驱动的搜索引擎，提供准确答案",
+    "description": "Perplexity AI 是 AI 驱动的搜索引擎，结合传统搜索和大语言模型。",
+    "tags": [
+      "AI",
+      "搜索"
+    ],
+    "status": "timeout",
+    "views": 3500,
+    "rating": 4.5
+  },
+  {
+    "id": 69,
+    "name": "Midjourney",
+    "url": "https://midjourney.com",
+    "logoUrl": "",
+    "category": "AI 设计",
+    "priceType": "paid",
+    "shortDesc": "AI 图像生成工具，通过 Discord 操作",
+    "description": "Midjourney 是一款 AI 图像生成工具，用户通过 Discord 机器人操作，输入文字描述即可生成高质量图像。",
+    "tags": [
+      "AI",
+      "设计"
+    ],
+    "status": "fail",
+    "views": 4200,
+    "rating": 4.9,
+    "statusCode": 403
+  },
+  {
+    "id": 70,
+    "name": "DALL-E 3",
+    "url": "https://openai.com/dall-e-3",
+    "logoUrl": "",
+    "category": "AI 设计",
+    "priceType": "paid",
+    "shortDesc": "OpenAI 图像生成，高质量 AI 绘画",
+    "description": "DALL-E 3 是 OpenAI 开发的图像生成模型，能够根据文字描述生成高质量图像。",
+    "tags": [
+      "AI",
+      "绘画"
+    ],
+    "status": "fail",
+    "views": 4000,
+    "rating": 4.8,
+    "statusCode": 403
+  },
+  {
+    "id": 71,
+    "name": "Stable Diffusion",
+    "url": "https://stability.ai",
+    "logoUrl": "",
+    "category": "AI 设计",
+    "priceType": "free",
+    "shortDesc": "开源 AI 图像生成，免费使用",
+    "description": "Stable Diffusion 是开源 AI 图像生成模型，支持本地部署。",
+    "tags": [
+      "AI",
+      "开源"
+    ],
+    "status": "fail",
+    "views": 3800,
+    "rating": 4.7,
+    "statusCode": 403
+  },
+  {
+    "id": 72,
+    "name": "Leonardo.ai",
+    "url": "https://leonardo.ai",
+    "logoUrl": "",
+    "category": "AI 设计",
+    "priceType": "freemium",
+    "shortDesc": "AI 艺术创作平台，游戏素材生成",
+    "description": "Leonardo.ai 是 AI 艺术创作平台，提供游戏素材、概念艺术等生成。",
+    "tags": [
+      "AI",
+      "艺术"
+    ],
+    "status": "timeout",
+    "views": 3600,
+    "rating": 4.6
+  },
+  {
+    "id": 73,
+    "name": "Canva 可画",
+    "url": "https://www.canva.com",
+    "logoUrl": "",
+    "category": "AI 设计",
+    "priceType": "freemium",
+    "shortDesc": "在线设计工具，海量模板素材",
+    "description": "Canva 是在线设计工具，提供海量模板、素材、AI 设计功能。",
+    "tags": [
+      "设计",
+      "模板"
+    ],
+    "status": "fail",
+    "views": 3400,
+    "rating": 4.5,
+    "statusCode": 403
+  },
+  {
+    "id": 83,
+    "name": "GitHub",
+    "url": "https://github.com",
+    "logoUrl": "",
+    "category": "开发编程",
+    "priceType": "free",
+    "shortDesc": "代码托管平台，开发者社区",
+    "description": "GitHub 是全球最大的代码托管平台和开发者社区，提供代码托管、版本控制、协作开发等功能。",
+    "tags": [
+      "编程",
+      "代码"
+    ],
+    "status": "timeout",
+    "views": 5000,
+    "rating": 4.9
+  },
+  {
+    "id": 84,
+    "name": "Stack Overflow",
+    "url": "https://stackoverflow.com",
+    "logoUrl": "",
+    "category": "开发编程",
+    "priceType": "free",
+    "shortDesc": "程序员问答社区，技术问题解答",
+    "description": "Stack Overflow 是全球最大的程序员问答社区，开发者可以在这里提问、回答技术问题。",
+    "tags": [
+      "编程",
+      "问答"
+    ],
+    "status": "fail",
+    "views": 4800,
+    "rating": 4.8,
+    "statusCode": 403
+  },
+  {
+    "id": 85,
+    "name": "V2EX",
+    "url": "https://www.v2ex.com",
+    "logoUrl": "",
+    "category": "开发编程",
+    "priceType": "free",
+    "shortDesc": "创意工作者社区，技术讨论",
+    "description": "V2EX 是创意工作者社区，提供技术讨论、分享、交流。",
+    "tags": [
+      "社区",
+      "技术"
+    ],
+    "status": "timeout",
+    "views": 4600,
+    "rating": 4.7
+  },
+  {
+    "id": 21,
+    "name": "GitHub",
+    "url": "https://github.com",
+    "logoUrl": "",
+    "category": "开发编程",
+    "priceType": "free",
+    "shortDesc": "代码托管平台，开发者社区",
+    "description": "GitHub 是全球最大的代码托管平台和开发者社区，提供代码托管、版本控制、协作开发等功能。",
+    "tags": [
+      "编程",
+      "代码",
+      "开发"
+    ],
+    "status": "timeout",
+    "views": 3500,
+    "rating": 4.9
+  },
+  {
+    "id": 22,
+    "name": "Stack Overflow",
+    "url": "https://stackoverflow.com",
+    "logoUrl": "",
+    "category": "开发编程",
+    "priceType": "free",
+    "shortDesc": "程序员问答社区，技术问题解答",
+    "description": "Stack Overflow 是全球最大的程序员问答社区，开发者可以在这里提问、回答技术问题。",
+    "tags": [
+      "编程",
+      "问答",
+      "社区"
+    ],
+    "status": "fail",
+    "views": 3200,
+    "rating": 4.8,
+    "statusCode": 403
+  },
+  {
+    "id": 11,
+    "name": "Phind",
+    "url": "https://phind.com",
+    "logoUrl": "https://cdn.worldvectorlogo.com/logos/phind.svg",
+    "category": "AI 工具",
+    "priceType": "free",
+    "shortDesc": "AI 编程搜索引擎",
+    "description": "Phind 是专为开发者设计的 AI 搜索引擎。",
+    "tags": [
+      "AI",
+      "编程",
+      "搜索"
+    ],
+    "status": "fail",
+    "views": 478,
+    "rating": 4.6,
+    "statusCode": 403
+  },
+  {
+    "id": 12,
+    "name": "Hugging Chat",
+    "url": "https://huggingface.co/chat",
+    "logoUrl": "https://cdn.worldvectorlogo.com/logos/huggingface.svg",
+    "category": "AI 工具",
+    "priceType": "free",
+    "shortDesc": "开源 AI 对话平台",
+    "description": "Hugging Chat 是 Hugging Face 开发的开源 AI 对话平台。",
+    "tags": [
+      "AI",
+      "开源",
+      "对话"
+    ],
+    "status": "timeout",
+    "views": 445,
+    "rating": 4.5
+  },
+  {
+    "id": 125,
+    "name": "TripoAI",
+    "slug": "tripo-ai",
+    "url": "https://www.tripo3d.ai/",
+    "logoUrl": "",
+    "category": "AI 设计",
+    "priceType": "free",
+    "shortDesc": "更好的 AI 3D 工作站",
+    "description": "TripoAI 提供更好的 AI 3D 工作站。",
+    "tags": [
+      "AI",
+      "3D",
+      "3D 建模"
+    ],
+    "status": "timeout",
+    "views": 2600,
+    "rating": 4.3
+  }
+]

@@ -4,16 +4,23 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import Header from '@/components/Header';
-import { TrendingUp, Star, ArrowRight } from 'lucide-react';
 
-const categoryIcons: any = {
+const CATEGORY_MAP: Record<string, string> = {
+  'ai-gongju': 'AI 工具',
+  'xiaolv-bangong': '效率办公',
+  'yingshi-ziyuan': '影视资源',
+  'zaixian-yinyue': '在线音乐',
+  'ai-sheji': 'AI 设计',
+  'shiyong-gongju': '实用工具',
+  'kaifa-biancheng': '开发编程',
+};
+
+const CATEGORY_ICONS: Record<string, string> = {
   'AI 工具': '🤖',
-  'AI 设计': '🎨',
-  'AI 视频': '🎬',
-  'AI 音乐': '🎵',
   '效率办公': '💼',
   '影视资源': '🎥',
   '在线音乐': '🎧',
+  'AI 设计': '🎨',
   '实用工具': '🛠️',
   '开发编程': '💻',
 };
@@ -22,14 +29,8 @@ export default function CategoryPage() {
   const params = useParams();
   const slug = params.slug as string;
   const [tools, setTools] = useState<any[]>([]);
-  const [allCategories, setAllCategories] = useState<any[]>([]);
-  const [category, setCategory] = useState<any>(null);
   const [loading, setLoading] = useState(true);
-  const [sortBy, setSortBy] = useState('popular');
-  const [selectedFilter, setSelectedFilter] = useState('all');
-
-  // 筛选标签
-  const filterTags = ['all', '视频', '去水印', '图片', '音频', 'PDF', '二维码', '转换'];
+  const [categoryName, setCategoryName] = useState('');
 
   useEffect(() => {
     loadData();
@@ -41,55 +42,12 @@ export default function CategoryPage() {
       const data = await res.json();
       const allTools = data.tools || [];
 
-      // 获取所有分类
-      const categories: Record<string, number> = {};
-      allTools.forEach((tool: any) => {
-        categories[tool.category] = (categories[tool.category] || 0) + 1;
-      });
-
-      const categoryList = Object.entries(categories).map(([name, count]) => ({
-        id: name,
-        name,
-        slug: name.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
-        count,
-      }));
-
-      setAllCategories(categoryList);
-
-      // 查找当前分类（通过 slug 反推分类名称）
-      const slugToCategory: Record<string, string> = {
-        'ai-gongju': 'AI 工具',
-        'xiaolv-bangong': '效率办公',
-        'yingshi-ziyuan': '影视资源',
-        'zaixian-yinyue': '在线音乐',
-        'ai-sheji': 'AI 设计',
-        'shiyong-gongju': '实用工具',
-        'kaifa-biancheng': '开发编程',
-      };
-
-      const categoryName = slugToCategory[slug] || slug;
-      const foundCategory = categoryList.find(c => c.name === categoryName);
-      setCategory(foundCategory || null);
+      // 从 slug 获取分类名
+      const name = CATEGORY_MAP[slug] || slug;
+      setCategoryName(name);
 
       // 筛选当前分类的工具
-      let filteredTools = foundCategory
-        ? allTools.filter((t: any) => t.category === foundCategory.name)
-        : allTools;
-
-      // 根据筛选标签过滤
-      if (selectedFilter !== 'all') {
-        filteredTools = filteredTools.filter((t: any) =>
-          t.tags && t.tags.some((tag: string) => tag.includes(selectedFilter))
-        );
-      }
-
-      // 排序
-      if (sortBy === 'popular') {
-        filteredTools.sort((a: any, b: any) => b.views - a.views);
-      } else if (sortBy === 'rating') {
-        filteredTools.sort((a: any, b: any) => b.rating - a.rating);
-      }
-
+      const filteredTools = allTools.filter((t: any) => t.category === name);
       setTools(filteredTools);
     } catch (error) {
       console.error('加载失败:', error);
@@ -97,12 +55,6 @@ export default function CategoryPage() {
       setLoading(false);
     }
   }
-
-  const priceLabels: any = {
-    free: '🆓 免费',
-    freemium: '🎁 免费额度',
-    paid: '💰 付费',
-  };
 
   if (loading) {
     return (
@@ -121,64 +73,56 @@ export default function CategoryPage() {
 
       {/* 分类头部 */}
       <section className="bg-gradient-to-b from-white to-gray-50 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="flex items-center justify-between mb-4">
-            <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-orange-600 rounded-xl flex items-center justify-center shadow-md">
-                <span className="text-2xl">{categoryIcons[category?.name] || '📁'}</span>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+              <button
+                onClick={() => window.history.back()}
+                className="flex items-center px-4 py-2 text-gray-600 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-colors"
+              >
+                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                返回
+              </button>
+              <div className="w-14 h-14 bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl flex items-center justify-center shadow-lg">
+                <span className="text-3xl">{CATEGORY_ICONS[categoryName] || '📁'}</span>
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-gray-900">{category ? category.name : '全部工具'}</h1>
-                <div className="flex items-center space-x-4 mt-2">
-                  <p className="text-sm text-gray-500">
-                    {category === 'AI 工具' && '发现优质 AI 工具，提升工作效率'}
-                    {category === '效率办公' && '发现优质办公工具，提升工作效率'}
-                    {category === '影视资源' && '发现优质影视平台，畅享高清视频'}
-                    {category === '在线音乐' && '发现优质音乐平台，畅听海量音乐'}
-                    {category === 'AI 设计' && '发现优质设计工具，激发创作灵感'}
-                    {category === '实用工具' && '发现优质实用工具，解决日常需求'}
-                    {category === '开发编程' && '发现优质开发工具，提升 coding 效率'}
-                    {!category && '发现优质工具，提升工作效率'}
-                  </p>
-                  <span className="text-sm text-gray-400">·</span>
-                  <span className="text-sm font-medium text-orange-600">共 {tools.length} 个工具</span>
-                </div>
+                <h1 className="text-3xl font-bold text-gray-900">{categoryName}</h1>
+                <p className="text-sm text-gray-500 mt-2">
+                  共 <span className="font-semibold text-orange-600">{tools.length}</span> 个工具
+                </p>
               </div>
             </div>
-            <button
-              onClick={() => window.history.back()}
-              className="text-sm text-gray-600 hover:text-gray-900 flex items-center space-x-1"
-            >
-              <span>←</span>
-              <span>返回</span>
-            </button>
           </div>
         </div>
       </section>
 
-      {/* 主体内容 */}
+      {/* 工具列表 */}
       <section className="py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* 工具列表 */}
           {tools.length === 0 ? (
             <div className="text-center py-20 bg-white rounded-xl">
               <div className="text-5xl mb-4">📭</div>
               <h3 className="text-lg font-bold text-gray-900 mb-2">暂无工具</h3>
               <p className="text-gray-500">该分类下还没有工具</p>
+              <Link href="/" className="mt-4 inline-block text-orange-600 hover:underline">
+                返回首页
+              </Link>
             </div>
           ) : (
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
               {tools.map((tool) => {
-                // 根据工具名称生成不同颜色的图标背景
                 const colors = [
-                  'bg-blue-500',
-                  'bg-purple-500',
-                  'bg-pink-500',
-                  'bg-green-500',
-                  'bg-teal-500',
-                  'bg-indigo-500',
-                  'bg-yellow-500',
-                  'bg-red-500',
+                  'bg-gradient-to-br from-blue-500 to-blue-600',
+                  'bg-gradient-to-br from-purple-500 to-purple-600',
+                  'bg-gradient-to-br from-pink-500 to-pink-600',
+                  'bg-gradient-to-br from-green-500 to-green-600',
+                  'bg-gradient-to-br from-teal-500 to-teal-600',
+                  'bg-gradient-to-br from-indigo-500 to-indigo-600',
+                  'bg-gradient-to-br from-yellow-500 to-yellow-600',
+                  'bg-gradient-to-br from-red-500 to-red-600',
                 ];
                 const colorIndex = tool.name.charCodeAt(0) % colors.length;
                 const bgColor = colors[colorIndex];
@@ -186,27 +130,18 @@ export default function CategoryPage() {
                 return (
                   <Link
                     key={tool.id}
-                    href={`/tool/${tool.slug}`}
-                    className="group p-5 bg-white rounded-2xl border border-gray-100 hover:border-purple-200 hover:shadow-lg transition-all"
+                    href={`/tool/${encodeURIComponent(tool.slug || tool.name.toLowerCase().replace(/[^a-z0-9]+/g, '-'))}`}
+                    className="group p-5 bg-white rounded-2xl border border-gray-100 hover:border-orange-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
                   >
-                    {/* 图标 */}
-                    <div className={`w-14 h-14 mb-4 rounded-2xl ${bgColor} flex items-center justify-center`}>
-                      <span className="text-white font-bold text-xl">{tool.name.charAt(0)}</span>
+                    <div className={`w-14 h-14 mb-4 rounded-2xl ${bgColor} flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow`}>
+                      <span className="text-white font-bold text-2xl">{tool.name.charAt(0)}</span>
                     </div>
-
-                    {/* 名称 */}
-                    <h3 className="font-bold text-gray-900 text-base mb-1">{tool.name}</h3>
-
-                    {/* 网址 */}
+                    <h3 className="font-bold text-gray-900 text-base mb-1 group-hover:text-orange-600 transition-colors">{tool.name}</h3>
                     <p className="text-xs text-gray-400 mb-3 truncate">{new URL(tool.url).hostname.replace('www.', '')}</p>
-
-                    {/* 描述 */}
-                    <p className="text-xs text-gray-500 mb-4 line-clamp-3 leading-relaxed">{tool.shortDesc}</p>
-
-                    {/* 标签 */}
+                    <p className="text-sm text-gray-500 mb-4 line-clamp-2 leading-relaxed">{tool.shortDesc}</p>
                     <div className="flex flex-wrap gap-1.5">
-                      {tool.tags.slice(0, 3).map((tag, index) => (
-                        <span key={index} className="text-xs px-2 py-1 bg-gray-100 text-gray-500 rounded-md">
+                      {tool.tags && tool.tags.slice(0, 3).map((tag, index) => (
+                        <span key={index} className="text-xs px-2 py-1 bg-orange-50 text-orange-600 rounded-md font-medium">
                           {tag}
                         </span>
                       ))}

@@ -1,11 +1,11 @@
 import { createClient } from '@supabase/supabase-js';
 import { Database } from '@/types/database';
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
 
 // 检查是否是占位符配置
-const isMockConfig = supabaseUrl.includes('placeholder') || !supabaseUrl.startsWith('https://');
+const isMockConfig = !supabaseUrl || supabaseUrl.includes('placeholder') || !supabaseUrl.startsWith('https://');
 
 // 创建 Supabase 客户端
 export const supabase = createClient<Database>(
@@ -27,7 +27,7 @@ export const supabase = createClient<Database>(
 
 // 服务端客户端（需要 service_role key）
 export const createServerClient = () => {
-  const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY!;
+  const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY || '';
   
   if (!serviceRoleKey || serviceRoleKey.includes('placeholder')) {
     throw new Error('SUPABASE_SERVICE_ROLE_KEY 未配置');

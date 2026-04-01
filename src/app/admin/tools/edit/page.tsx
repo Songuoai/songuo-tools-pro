@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { ArrowLeft, Save, X } from 'lucide-react';
@@ -12,7 +12,7 @@ const priceTypes = [
   { value: 'paid', label: '💰 付费' },
 ];
 
-export default function AdminToolEditor() {
+function AdminToolEditorContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const editId = searchParams.get('edit');
@@ -276,5 +276,17 @@ export default function AdminToolEditor() {
         </form>
       </div>
     </div>
+  );
+}
+
+export default function AdminToolEditor() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="w-16 h-16 border-4 border-orange-500 border-t-transparent rounded-full animate-spin"></div>
+      </div>
+    }>
+      <AdminToolEditorContent />
+    </Suspense>
   );
 }

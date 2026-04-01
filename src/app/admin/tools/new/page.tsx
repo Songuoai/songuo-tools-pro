@@ -47,7 +47,7 @@ export default function AdminToolsNewPage() {
           price_type: formData.priceType,
           short_desc: formData.shortDesc,
           description: formData.description,
-          features: formData.features.split('\n').filter(f => f.trim()),
+          features: formData.features ? formData.features.split('\n').filter(f => f.trim()) : [],
           tags: formData.tags.split(',').map(t => t.trim()).filter(t => t),
           logo_url: formData.logoUrl,
           status: 'published',

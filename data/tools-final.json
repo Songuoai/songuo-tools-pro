@@ -1,0 +1,2109 @@
+{
+  "tools": [
+    {
+      "id": 2,
+      "name": "Claude",
+      "url": "https://claude.ai",
+      "logoUrl": "https://cdn.worldvectorlogo.com/logos/claude-ai.svg",
+      "category": "AI 工具",
+      "priceType": "freemium",
+      "shortDesc": "Anthropic 开发的 AI 助手",
+      "description": "Claude 是 Anthropic 开发的 AI 助手，擅长长文本处理、文档分析、内容创作。",
+      "tags": [
+        "AI",
+        "对话",
+        "写作"
+      ],
+      "status": "published",
+      "views": 980,
+      "rating": 4.8
+    },
+    {
+      "id": 3,
+      "name": "Gemini",
+      "url": "https://gemini.google.com",
+      "logoUrl": "https://cdn.worldvectorlogo.com/logos/google-gemini.svg",
+      "category": "AI 工具",
+      "priceType": "free",
+      "shortDesc": "Google 的多模态 AI 模型",
+      "description": "Gemini 是 Google 开发的多模态 AI 模型，能够理解文本、图像、代码等多种输入。",
+      "tags": [
+        "AI",
+        "Google",
+        "多模态"
+      ],
+      "status": "published",
+      "views": 856,
+      "rating": 4.7,
+      "_broken": true,
+      "_status": "timeout"
+    },
+    {
+      "id": 4,
+      "name": "Copilot",
+      "url": "https://copilot.cloud.microsoft/",
+      "logoUrl": "https://cdn.worldvectorlogo.com/logos/microsoft-copilot.svg",
+      "category": "AI 工具",
+      "priceType": "freemium",
+      "shortDesc": "Microsoft AI 助手",
+      "description": "Microsoft Copilot 是微软开发的 AI 助手，集成在 Windows、Office 等产品中。",
+      "tags": [
+        "AI",
+        "Microsoft",
+        "办公"
+      ],
+      "status": "published",
+      "views": 742,
+      "rating": 4.6
+    },
+    {
+      "id": 5,
+      "name": "Perplexity",
+      "url": "https://www.perplexity.ai",
+      "logoUrl": "https://cdn.worldvectorlogo.com/logos/perplexity-ai.svg",
+      "category": "AI 工具",
+      "priceType": "freemium",
+      "shortDesc": "AI 驱动的搜索引擎",
+      "description": "Perplexity AI 是 AI 驱动的搜索引擎，结合传统搜索和大语言模型。",
+      "tags": [
+        "AI",
+        "搜索",
+        "研究"
+      ],
+      "status": "published",
+      "views": 689,
+      "rating": 4.7,
+      "_broken": true,
+      "_status": "timeout"
+    },
+    {
+      "id": 6,
+      "name": "Character.ai",
+      "url": "https://beta.character.ai",
+      "logoUrl": "https://cdn.worldvectorlogo.com/logos/character-ai.svg",
+      "category": "AI 工具",
+      "priceType": "freemium",
+      "shortDesc": "创建和对话 AI 角色",
+      "description": "Character.ai 允许用户创建自定义 AI 角色并与之对话。",
+      "tags": [
+        "AI",
+        "娱乐",
+        "对话"
+      ],
+      "status": "published",
+      "views": 623,
+      "rating": 4.5,
+      "_broken": true,
+      "_status": "timeout"
+    },
+    {
+      "id": 7,
+      "name": "Poe",
+      "url": "https://poe.com",
+      "logoUrl": "https://cdn.worldvectorlogo.com/logos/poe-ai.svg",
+      "category": "AI 工具",
+      "priceType": "freemium",
+      "shortDesc": "多合一 AI 聊天平台",
+      "description": "Poe 是 Quora 开发的多合一 AI 聊天平台，集成多个 AI 模型。",
+      "tags": [
+        "AI",
+        "聚合",
+        "对话"
+      ],
+      "status": "published",
+      "views": 589,
+      "rating": 4.6,
+      "_broken": true,
+      "_status": "timeout"
+    },
+    {
+      "id": 8,
+      "name": "You.com",
+      "url": "https://you.com",
+      "logoUrl": "https://cdn.worldvectorlogo.com/logos/you-com.svg",
+      "category": "AI 工具",
+      "priceType": "freemium",
+      "shortDesc": "AI 搜索引擎",
+      "description": "You.com 是 AI 驱动的搜索引擎，提供个性化搜索结果。",
+      "tags": [
+        "AI",
+        "搜索",
+        "隐私"
+      ],
+      "status": "published",
+      "views": 512,
+      "rating": 4.4,
+      "_broken": true,
+      "_status": "timeout"
+    },
+    {
+      "id": 9,
+      "name": "网易云音乐",
+      "slug": "wangyiyun-yinyue",
+      "url": "https://music.163.com",
+      "logoUrl": "",
+      "category": "在线音乐",
+      "priceType": "freemium",
+      "shortDesc": "在线音乐播放平台",
+      "description": "网易云音乐是在线音乐播放平台，提供海量音乐、歌单、电台等。",
+      "tags": [
+        "音乐",
+        "在线",
+        "MP3"
+      ],
+      "status": "published",
+      "views": 2500,
+      "rating": 4.8
+    },
+    {
+      "id": 13,
+      "name": "爱奇艺",
+      "slug": "aiqiyi",
+      "url": "https://www.iqiyi.com",
+      "logoUrl": "",
+      "category": "影视资源",
+      "priceType": "freemium",
+      "shortDesc": "在线视频平台，提供电影、电视剧、综艺等",
+      "description": "爱奇艺是中国领先的在线视频平台，提供海量电影、电视剧、综艺、动漫等高清视频内容。",
+      "tags": [
+        "视频",
+        "电影",
+        "电视剧"
+      ],
+      "status": "published",
+      "views": 3000,
+      "rating": 4.7
+    },
+    {
+      "id": 14,
+      "name": "腾讯视频",
+      "url": "https://v.qq.com",
+      "logoUrl": "",
+      "category": "影视资源",
+      "priceType": "freemium",
+      "shortDesc": "腾讯视频平台，提供电影、电视剧、综艺等",
+      "description": "腾讯视频是中国领先的在线视频平台，提供海量电影、电视剧、综艺、动漫等高清视频内容。",
+      "tags": [
+        "视频",
+        "电影",
+        "电视剧"
+      ],
+      "status": "published",
+      "views": 2800,
+      "rating": 4.6
+    },
+    {
+      "id": 15,
+      "name": "优酷视频",
+      "url": "https://www.youku.com",
+      "logoUrl": "",
+      "category": "影视资源",
+      "priceType": "freemium",
+      "shortDesc": "优酷视频平台，提供电影、电视剧、综艺等",
+      "description": "优酷是中国领先的在线视频平台，提供海量电影、电视剧、综艺、动漫等高清视频内容。",
+      "tags": [
+        "视频",
+        "电影",
+        "电视剧"
+      ],
+      "status": "published",
+      "views": 2600,
+      "rating": 4.5
+    },
+    {
+      "id": 23,
+      "name": "低端影视",
+      "url": "https://ddys.run",
+      "logoUrl": "",
+      "category": "影视资源",
+      "priceType": "free",
+      "shortDesc": "高质量影视资源站",
+      "description": "低端影视是一个高质量的影视资源网站，提供最新电影、电视剧在线观看。",
+      "tags": [
+        "影视",
+        "免费"
+      ],
+      "status": "published",
+      "views": 1800,
+      "rating": 4.6
+    },
+    {
+      "id": 24,
+      "name": "1905 电影网",
+      "url": "https://www.1905.com",
+      "logoUrl": "",
+      "category": "影视资源",
+      "priceType": "free",
+      "shortDesc": "CCTV6 官方电影网站",
+      "description": "1905 电影网是 CCTV6 电影频道官方网站，提供最新电影资讯、视频在线观看。",
+      "tags": [
+        "电影",
+        "官方"
+      ],
+      "status": "published",
+      "views": 1600,
+      "rating": 4.5
+    },
+    {
+      "id": 25,
+      "name": "HD 茉莉",
+      "url": "https://www.hdmoli.cc",
+      "logoUrl": "",
+      "category": "影视资源",
+      "priceType": "free",
+      "shortDesc": "高清电影资源",
+      "description": "HD 茉莉提供高清电影资源下载和在线观看。",
+      "tags": [
+        "电影",
+        "高清"
+      ],
+      "status": "published",
+      "views": 1500,
+      "rating": 4.4
+    },
+    {
+      "id": 26,
+      "name": "花子动漫",
+      "url": "https://huazidm.com",
+      "logoUrl": "",
+      "category": "影视资源",
+      "priceType": "free",
+      "shortDesc": "动漫资源平台",
+      "description": "花子动漫是一个专注动漫资源的平台，提供最新动漫在线观看。",
+      "tags": [
+        "动漫",
+        "资源"
+      ],
+      "status": "published",
+      "views": 1400,
+      "rating": 4.3
+    },
+    {
+      "id": 27,
+      "name": "乐兔影视",
+      "url": "https://letu.me",
+      "logoUrl": "",
+      "category": "影视资源",
+      "priceType": "free",
+      "shortDesc": "免费影视播放平台",
+      "description": "乐兔影视提供免费影视播放服务，包含电影、电视剧、综艺等。",
+      "tags": [
+        "影视",
+        "免费"
+      ],
+      "status": "published",
+      "views": 1300,
+      "rating": 4.2
+    },
+    {
+      "id": 28,
+      "name": "NovoplN",
+      "url": "https://novopln.site",
+      "logoUrl": "",
+      "category": "影视资源",
+      "priceType": "free",
+      "shortDesc": "在线影视播放",
+      "description": "NovoplN 提供在线影视播放服务。",
+      "tags": [
+        "影视",
+        "播放"
+      ],
+      "status": "published",
+      "views": 1200,
+      "rating": 4.1,
+      "_broken": true,
+      "_status": "fail"
+    },
+    {
+      "id": 29,
+      "name": "电影港",
+      "url": "https://www.dygang.cc",
+      "logoUrl": "",
+      "category": "影视资源",
+      "priceType": "free",
+      "shortDesc": "免费电影下载",
+      "description": "电影港提供免费电影下载服务。",
+      "tags": [
+        "电影",
+        "下载"
+      ],
+      "status": "published",
+      "views": 1100,
+      "rating": 4
+    },
+    {
+      "id": 30,
+      "name": "阳光电影网",
+      "url": "https://www.ygydy.com",
+      "logoUrl": "",
+      "category": "影视资源",
+      "priceType": "free",
+      "shortDesc": "免费电影天堂",
+      "description": "阳光电影网提供免费电影在线观看。",
+      "tags": [
+        "电影",
+        "免费"
+      ],
+      "status": "published",
+      "views": 1000,
+      "rating": 3.9,
+      "_broken": true,
+      "_status": "fail"
+    },
+    {
+      "id": 31,
+      "name": "MP4 电影",
+      "url": "https://www.mp4pa.com",
+      "logoUrl": "",
+      "category": "影视资源",
+      "priceType": "free",
+      "shortDesc": "MP4 格式电影下载",
+      "description": "MP4 电影提供 MP4 格式电影下载服务。",
+      "tags": [
+        "电影",
+        "MP4"
+      ],
+      "status": "published",
+      "views": 900,
+      "rating": 3.8,
+      "_broken": true,
+      "_status": "fail"
+    },
+    {
+      "id": 32,
+      "name": "看片狂人",
+      "url": "https://www.kpkuang.top",
+      "logoUrl": "",
+      "category": "影视资源",
+      "priceType": "free",
+      "shortDesc": "在线视频播放",
+      "description": "看片狂人提供在线视频播放服务。",
+      "tags": [
+        "影视",
+        "播放"
+      ],
+      "status": "published",
+      "views": 850,
+      "rating": 3.7,
+      "_broken": true,
+      "_status": "fail"
+    },
+    {
+      "id": 33,
+      "name": "茶杯狐",
+      "url": "https://cupfox.app",
+      "logoUrl": "",
+      "category": "影视资源",
+      "priceType": "free",
+      "shortDesc": "影视资源搜索",
+      "description": "茶杯狐提供影视资源搜索服务。",
+      "tags": [
+        "影视",
+        "搜索"
+      ],
+      "status": "published",
+      "views": 800,
+      "rating": 3.6
+    },
+    {
+      "id": 34,
+      "name": "奇妙影视",
+      "url": "https://qimiao.com",
+      "logoUrl": "",
+      "category": "影视资源",
+      "priceType": "free",
+      "shortDesc": "在线影视观看",
+      "description": "奇妙影视提供在线影视观看服务。",
+      "tags": [
+        "影视",
+        "观看"
+      ],
+      "status": "published",
+      "views": 750,
+      "rating": 3.5
+    },
+    {
+      "id": 35,
+      "name": "LIBVIO",
+      "url": "https://libvio.fun",
+      "logoUrl": "",
+      "category": "影视资源",
+      "priceType": "free",
+      "shortDesc": "高清影视资源",
+      "description": "LIBVIO 提供高清影视资源。",
+      "tags": [
+        "影视",
+        "高清"
+      ],
+      "status": "published",
+      "views": 700,
+      "rating": 3.4
+    },
+    {
+      "id": 36,
+      "name": "动漫岛",
+      "url": "https://www.dmd85.com",
+      "logoUrl": "",
+      "category": "影视资源",
+      "priceType": "free",
+      "shortDesc": "动漫资源网站",
+      "description": "动漫岛提供动漫资源在线观看。",
+      "tags": [
+        "动漫",
+        "资源"
+      ],
+      "status": "published",
+      "views": 650,
+      "rating": 3.3,
+      "_broken": true,
+      "_status": "fail"
+    },
+    {
+      "id": 37,
+      "name": "2333 动漫",
+      "url": "https://www.233dm.cc",
+      "logoUrl": "",
+      "category": "影视资源",
+      "priceType": "free",
+      "shortDesc": "动漫在线观看",
+      "description": "2333 动漫提供动漫在线观看服务。",
+      "tags": [
+        "动漫",
+        "观看"
+      ],
+      "status": "published",
+      "views": 600,
+      "rating": 3.2,
+      "_broken": true,
+      "_status": "fail"
+    },
+    {
+      "id": 38,
+      "name": "蘑菇影视",
+      "url": "https://www.mgslb.com",
+      "logoUrl": "",
+      "category": "影视资源",
+      "priceType": "free",
+      "shortDesc": "免费影视平台",
+      "description": "蘑菇影视提供免费影视平台服务。",
+      "tags": [
+        "影视",
+        "免费"
+      ],
+      "status": "published",
+      "views": 550,
+      "rating": 3.1,
+      "_broken": true,
+      "_status": "fail"
+    },
+    {
+      "id": 39,
+      "name": "高清拉",
+      "url": "https://gaoqing.la",
+      "logoUrl": "",
+      "category": "影视资源",
+      "priceType": "free",
+      "shortDesc": "高清电影下载",
+      "description": "高清拉提供高清电影下载服务。",
+      "tags": [
+        "电影",
+        "高清"
+      ],
+      "status": "published",
+      "views": 500,
+      "rating": 3,
+      "_broken": true,
+      "_status": "timeout"
+    },
+    {
+      "id": 16,
+      "name": "Notion",
+      "url": "https://www.notion.so",
+      "logoUrl": "",
+      "category": "效率办公",
+      "priceType": "freemium",
+      "shortDesc": "全能工作空间，笔记、文档、任务管理",
+      "description": "Notion 是一款全能工作空间应用，支持笔记、文档、数据库、任务管理等功能，适合个人和团队使用。",
+      "tags": [
+        "办公",
+        "笔记",
+        "协作"
+      ],
+      "status": "published",
+      "views": 2000,
+      "rating": 4.8
+    },
+    {
+      "id": 17,
+      "name": "飞书",
+      "url": "https://www.feishu.cn",
+      "logoUrl": "",
+      "category": "效率办公",
+      "priceType": "freemium",
+      "shortDesc": "企业协作平台，即时通讯、文档、日历",
+      "description": "飞书是字节跳动推出的企业协作平台，提供即时通讯、在线文档、日历、视频会议等功能。",
+      "tags": [
+        "办公",
+        "协作",
+        "企业"
+      ],
+      "status": "published",
+      "views": 1800,
+      "rating": 4.7
+    },
+    {
+      "id": 18,
+      "name": "Midjourney",
+      "url": "https://www.midjourney.com",
+      "logoUrl": "",
+      "category": "AI 设计",
+      "priceType": "paid",
+      "shortDesc": "AI 图像生成工具，通过 Discord 操作",
+      "description": "Midjourney 是一款 AI 图像生成工具，用户通过 Discord 机器人操作，输入文字描述即可生成高质量图像。",
+      "tags": [
+        "AI",
+        "设计",
+        "图像生成"
+      ],
+      "status": "published",
+      "views": 2200,
+      "rating": 4.9,
+      "_broken": true,
+      "_status": "fail"
+    },
+    {
+      "id": 19,
+      "name": "Canva 可画",
+      "url": "https://www.canva.cn",
+      "logoUrl": "",
+      "category": "AI 设计",
+      "priceType": "freemium",
+      "shortDesc": "在线设计工具，海量模板素材",
+      "description": "Canva 是一款在线设计工具，提供海量模板、素材、字体等，支持海报、社交媒体图片、演示文稿等设计。",
+      "tags": [
+        "设计",
+        "在线",
+        "模板"
+      ],
+      "status": "published",
+      "views": 1900,
+      "rating": 4.7,
+      "_broken": true,
+      "_status": "fail"
+    },
+    {
+      "id": 20,
+      "name": "TinyPNG",
+      "url": "https://tinypng.com",
+      "logoUrl": "",
+      "category": "实用工具",
+      "priceType": "freemium",
+      "shortDesc": "图片压缩，PNG/JPG 无损压缩",
+      "description": "TinyPNG 是一款智能图片压缩工具，采用智能压缩技术，可以有效减小 PNG 和 JPG 图片文件大小。",
+      "tags": [
+        "压缩",
+        "图片"
+      ],
+      "status": "published",
+      "views": 1500,
+      "rating": 4.6
+    },
+    {
+      "id": 40,
+      "name": "SaveFrom",
+      "url": "https://en.savefrom.net",
+      "logoUrl": "",
+      "category": "实用工具",
+      "priceType": "free",
+      "shortDesc": "支持抖音、B 站、YouTube 等多平台视频解析下载",
+      "description": "SaveFrom 支持多平台视频解析下载，部分平台可去水印，无需登录。",
+      "tags": [
+        "视频",
+        "下载"
+      ],
+      "status": "published",
+      "views": 2000,
+      "rating": 4.5
+    },
+    {
+      "id": 41,
+      "name": "抖音去水印",
+      "url": "https://douyin.wtf",
+      "logoUrl": "",
+      "category": "实用工具",
+      "priceType": "free",
+      "shortDesc": "专门解析抖音链接，无水印下载",
+      "description": "专门解析抖音链接，无水印下载，直接粘贴链接即可使用，无需注册。",
+      "tags": [
+        "去水印",
+        "抖音"
+      ],
+      "status": "published",
+      "views": 1900,
+      "rating": 4.4
+    },
+    {
+      "id": 42,
+      "name": "B 站视频解析",
+      "url": "https://jijidown.com",
+      "logoUrl": "",
+      "category": "实用工具",
+      "priceType": "free",
+      "shortDesc": "解析 B 站视频，支持无水印下载",
+      "description": "解析 B 站视频，支持无水印下载，无需登录，直接输入 BV 号即可。",
+      "tags": [
+        "B 站",
+        "下载"
+      ],
+      "status": "published",
+      "views": 1800,
+      "rating": 4.3
+    },
+    {
+      "id": 43,
+      "name": "Clipchamp",
+      "url": "https://clipchamp.com",
+      "logoUrl": "",
+      "category": "实用工具",
+      "priceType": "freemium",
+      "shortDesc": "微软旗下在线剪辑，支持拼接、去水印",
+      "description": "Clipchamp 是微软旗下的在线视频剪辑工具，免费版导出带小水印，无需登录即可编辑。",
+      "tags": [
+        "剪辑",
+        "视频"
+      ],
+      "status": "published",
+      "views": 1700,
+      "rating": 4.2
+    },
+    {
+      "id": 44,
+      "name": "视频去水印",
+      "url": "https://67tool.com",
+      "logoUrl": "",
+      "category": "实用工具",
+      "priceType": "free",
+      "shortDesc": "在线视频去水印工具",
+      "description": "在线视频去水印工具，支持多平台视频去水印。",
+      "tags": [
+        "去水印",
+        "视频"
+      ],
+      "status": "published",
+      "views": 1600,
+      "rating": 4.1
+    },
+    {
+      "id": 45,
+      "name": "视频剪辑",
+      "url": "https://67tool.com",
+      "logoUrl": "",
+      "category": "实用工具",
+      "priceType": "free",
+      "shortDesc": "在线视频剪辑工具",
+      "description": "在线视频剪辑工具，支持剪辑、拼接、添加字幕等功能。",
+      "tags": [
+        "剪辑",
+        "视频"
+      ],
+      "status": "published",
+      "views": 1500,
+      "rating": 4
+    },
+    {
+      "id": 46,
+      "name": "视频在线编辑",
+      "url": "https://online-video-cutter.com",
+      "logoUrl": "",
+      "category": "实用工具",
+      "priceType": "free",
+      "shortDesc": "在线视频编辑器",
+      "description": "在线视频编辑器，支持剪辑、旋转、裁剪等功能。",
+      "tags": [
+        "编辑",
+        "视频"
+      ],
+      "status": "published",
+      "views": 1400,
+      "rating": 3.9
+    },
+    {
+      "id": 47,
+      "name": "视频在线工具",
+      "url": "https://123apps.com",
+      "logoUrl": "",
+      "category": "实用工具",
+      "priceType": "free",
+      "shortDesc": "视频、音频、PDF 和文件转换在线工具",
+      "description": "123apps 提供视频、音频、PDF 和文件转换等在线工具。",
+      "tags": [
+        "工具",
+        "转换"
+      ],
+      "status": "published",
+      "views": 1300,
+      "rating": 3.8
+    },
+    {
+      "id": 48,
+      "name": "即时工具",
+      "url": "https://67tool.com",
+      "logoUrl": "",
+      "category": "实用工具",
+      "priceType": "free",
+      "shortDesc": "视频、音频、PDF 和文件转换在线工具",
+      "description": "即时工具提供视频、音频、PDF 和文件转换等在线工具。",
+      "tags": [
+        "工具",
+        "合集"
+      ],
+      "status": "published",
+      "views": 1200,
+      "rating": 3.7
+    },
+    {
+      "id": 49,
+      "name": "Remove.bg",
+      "slug": "remove-bg",
+      "url": "https://www.remove.bg",
+      "logoUrl": "https://cdn.worldvectorlogo.com/logos/remove-bg.svg",
+      "category": "实用工具",
+      "priceType": "freemium",
+      "shortDesc": "一键去除图片背景，免费下载低分辨率结果",
+      "description": "Remove.bg 是智能抠图工具，一键去除图片背景，免费下载低分辨率结果，无需登录。支持证件照背景去除。",
+      "tags": [
+        "智能抠图",
+        "证件照背景去除",
+        "图片处理"
+      ],
+      "status": "published",
+      "views": 3500,
+      "rating": 4.8
+    },
+    {
+      "id": 50,
+      "name": "Photopea",
+      "slug": "photopea",
+      "url": "https://www.photopea.com",
+      "logoUrl": "https://cdn.worldvectorlogo.com/logos/photopea.svg",
+      "category": "实用工具",
+      "priceType": "free",
+      "shortDesc": "完全免费的在线 Photoshop",
+      "description": "Photopea 是完全免费的在线 Photoshop，可制作证件照、去水印、编辑图片，无需注册。支持 PSD 格式，功能强大。",
+      "tags": [
+        "在线 PS",
+        "证件照制作",
+        "图片编辑"
+      ],
+      "status": "published",
+      "views": 3200,
+      "rating": 4.7
+    },
+    {
+      "id": 51,
+      "name": "证件照在线生成",
+      "slug": "zhengjianzhao-online",
+      "url": "https://www.remove.bg/zh/remove-background",
+      "logoUrl": "",
+      "category": "实用工具",
+      "priceType": "free",
+      "shortDesc": "自动生成不同规格证件照，支持换底色",
+      "description": "证件照在线生成（免登录版），自动生成不同规格证件照，支持换底色，免费下载基础版，无需登录。",
+      "tags": [
+        "证件照",
+        "在线生成",
+        "免登录"
+      ],
+      "status": "published",
+      "views": 2800,
+      "rating": 4.6,
+      "_broken": true,
+      "_status": "fail"
+    },
+    {
+      "id": 52,
+      "name": "TinyPNG",
+      "slug": "tinypng",
+      "url": "https://tinypng.com",
+      "logoUrl": "https://cdn.worldvectorlogo.com/logos/tinypng.svg",
+      "category": "实用工具",
+      "priceType": "free",
+      "shortDesc": "PNG/JPG 无损压缩，单次最多上传 20 张",
+      "description": "TinyPNG 是图片压缩工具，提供 PNG/JPG 无损压缩，单次最多上传 20 张，无需注册直接使用。",
+      "tags": [
+        "图片压缩",
+        "PNG",
+        "JPG"
+      ],
+      "status": "published",
+      "views": 3000,
+      "rating": 4.7
+    },
+    {
+      "id": 53,
+      "name": "草料二维码",
+      "slug": "cli-qrcode",
+      "url": "https://cli.im",
+      "logoUrl": "",
+      "category": "实用工具",
+      "priceType": "free",
+      "shortDesc": "免费生成网址、文本二维码",
+      "description": "草料二维码生成器，免费生成网址、文本二维码，无需登录，直接输入内容即可生成。",
+      "tags": [
+        "二维码生成",
+        "二维码",
+        "免费"
+      ],
+      "status": "published",
+      "views": 2600,
+      "rating": 4.5
+    },
+    {
+      "id": 53,
+      "name": "讯飞听见",
+      "url": "https://www.iflyrec.com",
+      "logoUrl": "",
+      "category": "实用工具",
+      "priceType": "freemium",
+      "shortDesc": "免费语音转文字、文字转语音",
+      "description": "讯飞听见提供免费语音转文字、文字转语音（基础音色）、音频剪辑，无需登录即可使用基础功能。",
+      "tags": [
+        "语音",
+        "转文字"
+      ],
+      "status": "published",
+      "views": 1400,
+      "rating": 4.1
+    },
+    {
+      "id": 54,
+      "name": "TTSMaker",
+      "url": "https://ttsmaker.cn",
+      "logoUrl": "",
+      "category": "实用工具",
+      "priceType": "free",
+      "shortDesc": "多音色免费文字转语音",
+      "description": "TTSMaker 提供多音色免费文字转语音，支持导出 MP3，无需注册直接使用。",
+      "tags": [
+        "配音",
+        "语音"
+      ],
+      "status": "published",
+      "views": 1300,
+      "rating": 4
+    },
+    {
+      "id": 55,
+      "name": "Kapwing",
+      "url": "https://www.kapwing.com",
+      "logoUrl": "",
+      "category": "实用工具",
+      "priceType": "freemium",
+      "shortDesc": "免费音频拼接、剪辑、去噪",
+      "description": "Kapwing 提供免费音频拼接、剪辑、去噪，导出带小水印但可手动去除，无需登录即可编辑。",
+      "tags": [
+        "剪辑",
+        "音频"
+      ],
+      "status": "published",
+      "views": 1200,
+      "rating": 3.9,
+      "_broken": true,
+      "_status": "timeout"
+    },
+    {
+      "id": 56,
+      "name": "iLovePDF",
+      "slug": "ilovepdf",
+      "url": "https://www.ilovepdf.com",
+      "logoUrl": "https://cdn.worldvectorlogo.com/logos/ilovepdf.svg",
+      "category": "实用工具",
+      "priceType": "free",
+      "shortDesc": "全功能 PDF 处理，免费版无次数限制",
+      "description": "iLovePDF 提供全功能 PDF 处理，包括 PDF 转 Word、合并、压缩等功能，免费版无次数限制，无需登录即可使用。",
+      "tags": [
+        "PDF",
+        "转换",
+        "合并",
+        "压缩"
+      ],
+      "status": "published",
+      "views": 2800,
+      "rating": 4.7
+    },
+    {
+      "id": 57,
+      "name": "SmallPDF",
+      "slug": "smallpdf",
+      "url": "https://smallpdf.com",
+      "logoUrl": "https://cdn.worldvectorlogo.com/logos/smallpdf.svg",
+      "category": "实用工具",
+      "priceType": "freemium",
+      "shortDesc": "支持 PDF 转 Word、Excel、PPT",
+      "description": "SmallPDF 支持 PDF 转 Word、Excel、PPT 等多种格式转换，免费版每日 2 次处理，无需登录。",
+      "tags": [
+        "PDF",
+        "转换",
+        "Word",
+        "Excel"
+      ],
+      "status": "published",
+      "views": 2600,
+      "rating": 4.6
+    },
+    {
+      "id": 58,
+      "name": "PDF24 Tools",
+      "slug": "pdf24-tools",
+      "url": "https://tools.pdf24.org",
+      "logoUrl": "",
+      "category": "实用工具",
+      "priceType": "free",
+      "shortDesc": "完全免费的 PDF 工具集",
+      "description": "PDF24 Tools 是完全免费的 PDF 工具集，提供 PDF 转换、合并、分割、压缩等全功能，无使用次数限制，无需注册。",
+      "tags": [
+        "PDF",
+        "免费",
+        "工具集"
+      ],
+      "status": "published",
+      "views": 2400,
+      "rating": 4.5
+    },
+    {
+      "id": 59,
+      "name": "Convertio",
+      "slug": "convertio",
+      "url": "https://convertio.co",
+      "logoUrl": "https://cdn.worldvectorlogo.com/logos/convertio.svg",
+      "category": "实用工具",
+      "priceType": "freemium",
+      "shortDesc": "支持文档、音视频、图片等格式转换",
+      "description": "Convertio 支持文档、音视频、图片等格式转换，免费版单文件最大 100MB，无需登录。",
+      "tags": [
+        "转换",
+        "格式",
+        "文档"
+      ],
+      "status": "published",
+      "views": 2200,
+      "rating": 4.4
+    },
+    {
+      "id": 60,
+      "name": "Online OCR",
+      "slug": "online-ocr",
+      "url": "https://www.onlineocr.net",
+      "logoUrl": "",
+      "category": "实用工具",
+      "priceType": "free",
+      "shortDesc": "免费提取 PDF/图片中的文字",
+      "description": "Online OCR 免费提取 PDF/图片中的文字，支持多语言识别，无需注册即可使用。",
+      "tags": [
+        "OCR",
+        "提取",
+        "文字识别"
+      ],
+      "status": "published",
+      "views": 2000,
+      "rating": 4.3
+    },
+    {
+      "id": 61,
+      "name": "Google Docs",
+      "slug": "google-docs",
+      "url": "https://docs.google.com",
+      "logoUrl": "https://cdn.worldvectorlogo.com/logos/google-docs.svg",
+      "category": "实用工具",
+      "priceType": "free",
+      "shortDesc": "免费在线编辑 Word/Excel",
+      "description": "Google Docs 提供免费在线文档编辑，支持 Word/Excel 在线编辑和导出 PDF，无需登录可查看基础内容，编辑需登录。",
+      "tags": [
+        "文档",
+        "编辑",
+        "在线办公"
+      ],
+      "status": "published",
+      "views": 3000,
+      "rating": 4.6,
+      "_broken": true,
+      "_status": "timeout"
+    },
+    {
+      "id": 62,
+      "name": "Word to PDF Online",
+      "url": "https://wordtopdf.com",
+      "logoUrl": "",
+      "category": "实用工具",
+      "priceType": "free",
+      "shortDesc": "文档互转，免费 Word/PDF 互转",
+      "description": "Word to PDF Online 提供文档互转，免费 Word/PDF 互转，无需登录，直接上传文件即可。",
+      "tags": [
+        "转换",
+        "PDF"
+      ],
+      "status": "published",
+      "views": 1200,
+      "rating": 3.9
+    },
+    {
+      "id": 63,
+      "name": "Aconvert",
+      "url": "https://www.aconvert.com",
+      "logoUrl": "",
+      "category": "实用工具",
+      "priceType": "free",
+      "shortDesc": "万能格式转换，支持视频分割、音频合并",
+      "description": "Aconvert 是万能格式转换工具，支持视频分割、音频合并、文档转换等，免费版无次数限制，无需登录。",
+      "tags": [
+        "转换",
+        "格式"
+      ],
+      "status": "published",
+      "views": 1100,
+      "rating": 3.8
+    },
+    {
+      "id": 64,
+      "name": "ChatGPT",
+      "url": "https://chatgpt.com",
+      "logoUrl": "",
+      "category": "AI 工具",
+      "priceType": "freemium",
+      "shortDesc": "OpenAI 开发的 AI 对话助手，智能聊天、写作、编程",
+      "description": "ChatGPT 是 OpenAI 开发的大型语言模型，能够进行自然对话、回答问题、创作文字、编程辅助等。",
+      "tags": [
+        "AI",
+        "对话"
+      ],
+      "status": "published",
+      "views": 5000,
+      "rating": 4.9,
+      "_broken": true,
+      "_status": "timeout"
+    },
+    {
+      "id": 65,
+      "name": "Claude",
+      "url": "https://claude.ai",
+      "logoUrl": "",
+      "category": "AI 工具",
+      "priceType": "freemium",
+      "shortDesc": "Anthropic 开发的 AI 助手，擅长长文本处理",
+      "description": "Claude 是 Anthropic 开发的 AI 助手，擅长长文本处理、文档分析、内容创作。",
+      "tags": [
+        "AI",
+        "写作"
+      ],
+      "status": "published",
+      "views": 4500,
+      "rating": 4.8
+    },
+    {
+      "id": 66,
+      "name": "Gemini",
+      "url": "https://gemini.google.com",
+      "logoUrl": "",
+      "category": "AI 工具",
+      "priceType": "free",
+      "shortDesc": "Google 的多模态 AI 模型，完全免费",
+      "description": "Gemini 是 Google 开发的多模态 AI 模型，能够理解文本、图像、代码等多种输入。",
+      "tags": [
+        "AI",
+        "Google"
+      ],
+      "status": "published",
+      "views": 4000,
+      "rating": 4.7,
+      "_broken": true,
+      "_status": "timeout"
+    },
+    {
+      "id": 67,
+      "name": "Copilot",
+      "url": "https://copilot.cloud.microsoft/",
+      "logoUrl": "",
+      "category": "AI 工具",
+      "priceType": "freemium",
+      "shortDesc": "Microsoft AI 助手，集成 GPT-4",
+      "description": "Microsoft Copilot 是微软开发的 AI 助手，集成 GPT-4，支持联网搜索。",
+      "tags": [
+        "AI",
+        "Microsoft"
+      ],
+      "status": "published",
+      "views": 3800,
+      "rating": 4.6
+    },
+    {
+      "id": 68,
+      "name": "Perplexity",
+      "url": "https://www.perplexity.ai",
+      "logoUrl": "",
+      "category": "AI 工具",
+      "priceType": "freemium",
+      "shortDesc": "AI 驱动的搜索引擎，提供准确答案",
+      "description": "Perplexity AI 是 AI 驱动的搜索引擎，结合传统搜索和大语言模型。",
+      "tags": [
+        "AI",
+        "搜索"
+      ],
+      "status": "published",
+      "views": 3500,
+      "rating": 4.5,
+      "_broken": true,
+      "_status": "timeout"
+    },
+    {
+      "id": 69,
+      "name": "Midjourney",
+      "url": "https://www.midjourney.com",
+      "logoUrl": "",
+      "category": "AI 设计",
+      "priceType": "paid",
+      "shortDesc": "AI 图像生成工具，通过 Discord 操作",
+      "description": "Midjourney 是一款 AI 图像生成工具，用户通过 Discord 机器人操作，输入文字描述即可生成高质量图像。",
+      "tags": [
+        "AI",
+        "设计"
+      ],
+      "status": "published",
+      "views": 4200,
+      "rating": 4.9,
+      "_broken": true,
+      "_status": "fail"
+    },
+    {
+      "id": 70,
+      "name": "DALL-E 3",
+      "url": "https://www.bing.com/images/create",
+      "logoUrl": "",
+      "category": "AI 设计",
+      "priceType": "paid",
+      "shortDesc": "OpenAI 图像生成，高质量 AI 绘画",
+      "description": "DALL-E 3 是 OpenAI 开发的图像生成模型，能够根据文字描述生成高质量图像。",
+      "tags": [
+        "AI",
+        "绘画"
+      ],
+      "status": "published",
+      "views": 4000,
+      "rating": 4.8
+    },
+    {
+      "id": 71,
+      "name": "Stable Diffusion",
+      "url": "https://stablediffusionweb.com",
+      "logoUrl": "",
+      "category": "AI 设计",
+      "priceType": "free",
+      "shortDesc": "开源 AI 图像生成，免费使用",
+      "description": "Stable Diffusion 是开源 AI 图像生成模型，支持本地部署。",
+      "tags": [
+        "AI",
+        "开源"
+      ],
+      "status": "published",
+      "views": 3800,
+      "rating": 4.7,
+      "_broken": true,
+      "_status": "timeout"
+    },
+    {
+      "id": 72,
+      "name": "Leonardo.ai",
+      "url": "https://app.leonardo.ai",
+      "logoUrl": "",
+      "category": "AI 设计",
+      "priceType": "freemium",
+      "shortDesc": "AI 艺术创作平台，游戏素材生成",
+      "description": "Leonardo.ai 是 AI 艺术创作平台，提供游戏素材、概念艺术等生成。",
+      "tags": [
+        "AI",
+        "艺术"
+      ],
+      "status": "published",
+      "views": 3600,
+      "rating": 4.6,
+      "_broken": true,
+      "_status": "timeout"
+    },
+    {
+      "id": 73,
+      "name": "Canva 可画",
+      "url": "https://www.canva.cn",
+      "logoUrl": "",
+      "category": "AI 设计",
+      "priceType": "freemium",
+      "shortDesc": "在线设计工具，海量模板素材",
+      "description": "Canva 是在线设计工具，提供海量模板、素材、AI 设计功能。",
+      "tags": [
+        "设计",
+        "模板"
+      ],
+      "status": "published",
+      "views": 3400,
+      "rating": 4.5,
+      "_broken": true,
+      "_status": "fail"
+    },
+    {
+      "id": 74,
+      "name": "Figma",
+      "url": "https://www.figma.com",
+      "logoUrl": "",
+      "category": "AI 设计",
+      "priceType": "freemium",
+      "shortDesc": "协作设计工具，UI/UX 设计",
+      "description": "Figma 是协作设计工具，支持 UI/UX 设计、原型制作、团队协作。",
+      "tags": [
+        "设计",
+        "UI"
+      ],
+      "status": "published",
+      "views": 3200,
+      "rating": 4.4
+    },
+    {
+      "id": 75,
+      "name": "网易云音乐",
+      "url": "https://music.163.com",
+      "logoUrl": "",
+      "category": "在线音乐",
+      "priceType": "freemium",
+      "shortDesc": "在线音乐播放平台，海量歌曲",
+      "description": "网易云音乐是在线音乐播放平台，提供海量音乐、歌单、电台等。",
+      "tags": [
+        "音乐",
+        "在线"
+      ],
+      "status": "published",
+      "views": 4500,
+      "rating": 4.8
+    },
+    {
+      "id": 76,
+      "name": "QQ 音乐",
+      "url": "https://y.qq.com",
+      "logoUrl": "",
+      "category": "在线音乐",
+      "priceType": "freemium",
+      "shortDesc": "腾讯音乐平台，正版音乐",
+      "description": "QQ 音乐是腾讯旗下的在线音乐平台，提供正版音乐、MV、直播等。",
+      "tags": [
+        "音乐",
+        "腾讯"
+      ],
+      "status": "published",
+      "views": 4300,
+      "rating": 4.7
+    },
+    {
+      "id": 77,
+      "name": "酷狗音乐",
+      "url": "https://www.kugou.com",
+      "logoUrl": "",
+      "category": "在线音乐",
+      "priceType": "freemium",
+      "shortDesc": "在线音乐播放器，高音质",
+      "description": "酷狗音乐是在线音乐播放器，提供高品质音乐播放、下载等。",
+      "tags": [
+        "音乐",
+        "播放"
+      ],
+      "status": "published",
+      "views": 4100,
+      "rating": 4.6
+    },
+    {
+      "id": 78,
+      "name": "酷我音乐",
+      "url": "https://www.kuwo.cn",
+      "logoUrl": "",
+      "category": "在线音乐",
+      "priceType": "freemium",
+      "shortDesc": "在线音乐平台，海量曲库",
+      "description": "酷我音乐是在线音乐平台，提供海量音乐在线播放。",
+      "tags": [
+        "音乐",
+        "在线"
+      ],
+      "status": "published",
+      "views": 3900,
+      "rating": 4.5
+    },
+    {
+      "id": 79,
+      "name": "Notion",
+      "url": "https://www.notion.so",
+      "logoUrl": "",
+      "category": "效率办公",
+      "priceType": "freemium",
+      "shortDesc": "全能工作空间，笔记、文档、任务管理",
+      "description": "Notion 是一款全能工作空间应用，支持笔记、文档、数据库、任务管理等功能。",
+      "tags": [
+        "办公",
+        "笔记"
+      ],
+      "status": "published",
+      "views": 4000,
+      "rating": 4.8
+    },
+    {
+      "id": 80,
+      "name": "飞书",
+      "url": "https://www.feishu.cn",
+      "logoUrl": "",
+      "category": "效率办公",
+      "priceType": "freemium",
+      "shortDesc": "企业协作平台，即时通讯、文档",
+      "description": "飞书是字节跳动推出的企业协作平台，提供即时通讯、在线文档、日历、视频会议等功能。",
+      "tags": [
+        "办公",
+        "协作"
+      ],
+      "status": "published",
+      "views": 3800,
+      "rating": 4.7
+    },
+    {
+      "id": 81,
+      "name": "钉钉",
+      "url": "https://www.dingtalk.com",
+      "logoUrl": "",
+      "category": "效率办公",
+      "priceType": "free",
+      "shortDesc": "阿里巴巴企业协作平台",
+      "description": "钉钉是阿里巴巴推出的企业协作平台，提供即时通讯、审批、考勤等功能。",
+      "tags": [
+        "办公",
+        "企业"
+      ],
+      "status": "published",
+      "views": 3600,
+      "rating": 4.6
+    },
+    {
+      "id": 82,
+      "name": "腾讯文档",
+      "url": "https://docs.qq.com",
+      "logoUrl": "",
+      "category": "效率办公",
+      "priceType": "free",
+      "shortDesc": "腾讯在线文档，多人协作编辑",
+      "description": "腾讯文档是在线协作文档工具，支持多人实时编辑、评论、分享。",
+      "tags": [
+        "文档",
+        "协作"
+      ],
+      "status": "published",
+      "views": 3400,
+      "rating": 4.5
+    },
+    {
+      "id": 83,
+      "name": "GitHub",
+      "url": "https://github.com",
+      "logoUrl": "",
+      "category": "开发编程",
+      "priceType": "free",
+      "shortDesc": "代码托管平台，开发者社区",
+      "description": "GitHub 是全球最大的代码托管平台和开发者社区，提供代码托管、版本控制、协作开发等功能。",
+      "tags": [
+        "编程",
+        "代码"
+      ],
+      "status": "published",
+      "views": 5000,
+      "rating": 4.9,
+      "_broken": true,
+      "_status": "timeout"
+    },
+    {
+      "id": 84,
+      "name": "Stack Overflow",
+      "url": "https://stackoverflow.com",
+      "logoUrl": "",
+      "category": "开发编程",
+      "priceType": "free",
+      "shortDesc": "程序员问答社区，技术问题解答",
+      "description": "Stack Overflow 是全球最大的程序员问答社区，开发者可以在这里提问、回答技术问题。",
+      "tags": [
+        "编程",
+        "问答"
+      ],
+      "status": "published",
+      "views": 4800,
+      "rating": 4.8,
+      "_broken": true,
+      "_status": "fail"
+    },
+    {
+      "id": 85,
+      "name": "V2EX",
+      "url": "https://www.v2ex.com",
+      "logoUrl": "",
+      "category": "开发编程",
+      "priceType": "free",
+      "shortDesc": "创意工作者社区，技术讨论",
+      "description": "V2EX 是创意工作者社区，提供技术讨论、分享、交流。",
+      "tags": [
+        "社区",
+        "技术"
+      ],
+      "status": "published",
+      "views": 4600,
+      "rating": 4.7,
+      "_broken": true,
+      "_status": "timeout"
+    },
+    {
+      "id": 86,
+      "name": "掘金",
+      "url": "https://juejin.cn",
+      "logoUrl": "",
+      "category": "开发编程",
+      "priceType": "free",
+      "shortDesc": "技术文章分享平台",
+      "description": "掘金是技术文章分享平台，提供前端、后端、移动端等技术文章。",
+      "tags": [
+        "技术",
+        "文章"
+      ],
+      "status": "published",
+      "views": 4400,
+      "rating": 4.6
+    },
+    {
+      "id": 21,
+      "name": "GitHub",
+      "url": "https://github.com",
+      "logoUrl": "",
+      "category": "开发编程",
+      "priceType": "free",
+      "shortDesc": "代码托管平台，开发者社区",
+      "description": "GitHub 是全球最大的代码托管平台和开发者社区，提供代码托管、版本控制、协作开发等功能。",
+      "tags": [
+        "编程",
+        "代码",
+        "开发"
+      ],
+      "status": "published",
+      "views": 3500,
+      "rating": 4.9,
+      "_broken": true,
+      "_status": "timeout"
+    },
+    {
+      "id": 22,
+      "name": "Stack Overflow",
+      "url": "https://stackoverflow.com",
+      "logoUrl": "",
+      "category": "开发编程",
+      "priceType": "free",
+      "shortDesc": "程序员问答社区，技术问题解答",
+      "description": "Stack Overflow 是全球最大的程序员问答社区，开发者可以在这里提问、回答技术问题。",
+      "tags": [
+        "编程",
+        "问答",
+        "社区"
+      ],
+      "status": "published",
+      "views": 3200,
+      "rating": 4.8,
+      "_broken": true,
+      "_status": "fail"
+    },
+    {
+      "id": 9,
+      "name": "QQ 音乐",
+      "url": "https://y.qq.com",
+      "logoUrl": "",
+      "category": "在线音乐",
+      "priceType": "freemium",
+      "shortDesc": "腾讯音乐平台",
+      "description": "QQ 音乐是腾讯旗下的在线音乐平台，提供正版音乐、MV、直播等。",
+      "tags": [
+        "音乐",
+        "腾讯",
+        "MP3"
+      ],
+      "status": "published",
+      "views": 2200,
+      "rating": 4.7
+    },
+    {
+      "id": 10,
+      "name": "酷狗音乐",
+      "url": "https://www.kugou.com",
+      "logoUrl": "",
+      "category": "在线音乐",
+      "priceType": "freemium",
+      "shortDesc": "在线音乐播放器",
+      "description": "酷狗音乐是在线音乐播放器，提供高品质音乐播放、下载等。",
+      "tags": [
+        "音乐",
+        "播放器",
+        "MP3"
+      ],
+      "status": "published",
+      "views": 1800,
+      "rating": 4.6
+    },
+    {
+      "id": 11,
+      "name": "Phind",
+      "url": "https://www.phind.com",
+      "logoUrl": "https://cdn.worldvectorlogo.com/logos/phind.svg",
+      "category": "AI 工具",
+      "priceType": "free",
+      "shortDesc": "AI 编程搜索引擎",
+      "description": "Phind 是专为开发者设计的 AI 搜索引擎。",
+      "tags": [
+        "AI",
+        "编程",
+        "搜索"
+      ],
+      "status": "published",
+      "views": 478,
+      "rating": 4.6,
+      "_broken": true,
+      "_status": "fail"
+    },
+    {
+      "id": 12,
+      "name": "Hugging Chat",
+      "url": "https://huggingface.co/chat",
+      "logoUrl": "https://cdn.worldvectorlogo.com/logos/huggingface.svg",
+      "category": "AI 工具",
+      "priceType": "free",
+      "shortDesc": "开源 AI 对话平台",
+      "description": "Hugging Chat 是 Hugging Face 开发的开源 AI 对话平台。",
+      "tags": [
+        "AI",
+        "开源",
+        "对话"
+      ],
+      "status": "published",
+      "views": 445,
+      "rating": 4.5,
+      "_broken": true,
+      "_status": "timeout"
+    },
+    {
+      "id": 107,
+      "name": "Suno-Top",
+      "slug": "suno-top",
+      "url": "https://suno-top.com/",
+      "logoUrl": "",
+      "category": "在线音乐",
+      "priceType": "free",
+      "shortDesc": "免费的 Suno 音乐下载服务",
+      "description": "Suno-Top 是一款免费的 Suno 音乐下载服务，无需注册即可即时获取您喜爱的 AI 歌曲，简单、快速且完全免费。",
+      "tags": [
+        "音乐",
+        "下载",
+        "AI 音乐"
+      ],
+      "status": "published",
+      "views": 3000,
+      "rating": 4.5
+    },
+    {
+      "id": 108,
+      "name": "MusicHero.ai",
+      "slug": "musichero-ai",
+      "url": "https://musichero.ai/zh-CN",
+      "logoUrl": "",
+      "category": "在线音乐",
+      "priceType": "free",
+      "shortDesc": "免费在线 AI 音乐生成器",
+      "description": "MusicHero.ai 是一款免费在线 AI 音乐生成器，能轻松通过文本创作音乐，支持去除人声、生成 AI 歌词和制作 MP4 音乐视频，无需注册，即刻体验。",
+      "tags": [
+        "AI",
+        "音乐生成",
+        "免费"
+      ],
+      "status": "published",
+      "views": 2800,
+      "rating": 4.4
+    },
+    {
+      "id": 109,
+      "name": "Brev AI",
+      "slug": "brev-ai",
+      "url": "https://www.novatools.cn/tools/brev-ai-ai-music-generator-free-online",
+      "logoUrl": "",
+      "category": "在线音乐",
+      "priceType": "free",
+      "shortDesc": "免费在线 AI 音乐生成器",
+      "description": "Brev AI 是一款强大的免费在线 AI 音乐生成器，能将您的文字快速转化为专业品质的免版税音乐，还能移除人声、生成歌词，甚至制作音乐视频。",
+      "tags": [
+        "AI",
+        "音乐生成",
+        "免费"
+      ],
+      "status": "published",
+      "views": 2600,
+      "rating": 4.3
+    },
+    {
+      "id": 110,
+      "name": "文心快码",
+      "slug": "comate-baidu",
+      "url": "https://www.novatools.cn/tools/comate-baidu",
+      "logoUrl": "",
+      "category": "开发编程",
+      "priceType": "free",
+      "shortDesc": "源自百度 20 年技术沉淀的 AI 编程辅助工具",
+      "description": "文心快码源自百度 20 年技术沉淀，更懂中文语境的 AI 编程辅助工具，让编码效率飞跃。",
+      "tags": [
+        "AI",
+        "编程",
+        "百度"
+      ],
+      "status": "published",
+      "views": 3200,
+      "rating": 4.6
+    },
+    {
+      "id": 111,
+      "name": "Tempo",
+      "slug": "tempo",
+      "url": "https://www.novatools.cn/tools/tempo",
+      "logoUrl": "",
+      "category": "开发编程",
+      "priceType": "free",
+      "shortDesc": "打破设计与开发的边界",
+      "description": "Tempo 打破设计与开发的边界，让 React 应用开发效率提升 10 倍的视觉化协作工具。",
+      "tags": [
+        "React",
+        "开发",
+        "协作"
+      ],
+      "status": "published",
+      "views": 3000,
+      "rating": 4.5
+    },
+    {
+      "id": 112,
+      "name": "Cursor",
+      "slug": "cursor",
+      "url": "https://cursor.com/cn",
+      "logoUrl": "",
+      "category": "开发编程",
+      "priceType": "free",
+      "shortDesc": "深度集成 AI 的代码编辑器",
+      "description": "Cursor 是一款深度集成 AI 的代码编辑器，支持自然语言编辑、智能补全和代码库理解，大幅提升开发效率。",
+      "tags": [
+        "AI",
+        "代码编辑器",
+        "开发"
+      ],
+      "status": "published",
+      "views": 3500,
+      "rating": 4.7
+    },
+    {
+      "id": 113,
+      "name": "PaywallBuster",
+      "slug": "paywallbuster",
+      "url": "https://www.novatools.cn/tools/paywallbuster",
+      "logoUrl": "",
+      "category": "实用工具",
+      "priceType": "free",
+      "shortDesc": "免费在线工具，帮助绕过新闻网站的付费墙",
+      "description": "PaywallBuster 是一款免费在线工具，帮助用户快速绕过新闻网站的付费墙，轻松获取内容。",
+      "tags": [
+        "工具",
+        "免费",
+        "新闻"
+      ],
+      "status": "published",
+      "views": 2800,
+      "rating": 4.4
+    },
+    {
+      "id": 114,
+      "name": "RankAI",
+      "slug": "rankai",
+      "url": "https://www.novatools.cn/tools/rankai",
+      "logoUrl": "",
+      "category": "实用工具",
+      "priceType": "free",
+      "shortDesc": "全自动 AI SEO/GEO 代理",
+      "description": "RankAI 是全自动 AI SEO/GEO 代理，助您的网站在 Google 与 ChatGPT 等 AI 搜索中脱颖而出。",
+      "tags": [
+        "AI",
+        "SEO",
+        "SEO 优化"
+      ],
+      "status": "published",
+      "views": 2600,
+      "rating": 4.3
+    },
+    {
+      "id": 115,
+      "name": "Evai 建筑大师",
+      "slug": "evai-architect",
+      "url": "https://www.openevai.com/",
+      "logoUrl": "",
+      "category": "AI 设计",
+      "priceType": "free",
+      "shortDesc": "专为设计师打造的 AI 创作平台",
+      "description": "Evai 建筑大师（OpenEvai）是深耕于建筑、室内、景观及家具设计领域的全流程 AI 创作平台，专为设计师打造的 AI 合伙人，集成 AI 渲染、视频生成及图转 3D，助力设计效率提升 10 倍。",
+      "tags": [
+        "AI",
+        "建筑设计",
+        "室内设计"
+      ],
+      "status": "published",
+      "views": 2400,
+      "rating": 4.2
+    },
+    {
+      "id": 116,
+      "name": "JoyPix",
+      "slug": "joypix",
+      "url": "https://www.novatools.cn/tools/joypix-ai",
+      "logoUrl": "",
+      "category": "AI 视频",
+      "priceType": "free",
+      "shortDesc": "让照片开口说话",
+      "description": "JoyPix 让照片开口说话，集成全球顶级模型的全能型 AI 视频故事创作平台。",
+      "tags": [
+        "AI",
+        "视频",
+        "照片"
+      ],
+      "status": "published",
+      "views": 2800,
+      "rating": 4.4
+    },
+    {
+      "id": 117,
+      "name": "RemoveBGVideo",
+      "slug": "removebgvideo",
+      "url": "https://removebgvideo.com/",
+      "logoUrl": "",
+      "category": "AI 视频",
+      "priceType": "free",
+      "shortDesc": "利用 AI 技术一键移除视频背景",
+      "description": "无需绿幕，利用 AI 技术一键移除视频背景，支持 4K 高清导出与透明通道。一款专为内容创作者打造的智能视频处理工具，它打破了传统影视制作对绿幕和复杂抠像技术的依赖，通过先进的 GPU 加速与 AI 深度学习算法，用户只需上传视频，系统即可精准识别主体并自动分离背景，无论是人像、宠物还是产品都能实现发丝级的处理效果。",
+      "tags": [
+        "AI",
+        "视频",
+        "背景移除"
+      ],
+      "status": "published",
+      "views": 3000,
+      "rating": 4.5
+    },
+    {
+      "id": 118,
+      "name": "BeautyPlus",
+      "slug": "beautyplus",
+      "url": "https://www.novatools.cn/tools/beautyplus-com",
+      "logoUrl": "",
+      "category": "AI 设计",
+      "priceType": "free",
+      "shortDesc": "风靡全球的 AI 图像与视频处理工具",
+      "description": "BeautyPlus 是一款风靡全球的 AI 图像与视频处理工具，它将顶尖的 AI 技术与直觉式操作完美融合。不仅仅是简单的滤镜堆叠，BeautyPlus 更像是一位懂你的随身 AI 艺术家，无论是修复模糊的陈旧往事、精细雕琢人像细节，还是将日常自拍瞬间转化为惊艳的艺术画作，都能在指尖轻松实现，通过对 50 多种专业编辑功能的深度优化，让它复杂的修图过程变得像点击快门一样自然简单。",
+      "tags": [
+        "AI",
+        "图像处理",
+        "视频处理"
+      ],
+      "status": "published",
+      "views": 3200,
+      "rating": 4.6
+    },
+    {
+      "id": 119,
+      "name": "Music FX",
+      "slug": "music-fx",
+      "url": "https://musicfx.net/",
+      "logoUrl": "",
+      "category": "在线音乐",
+      "priceType": "free",
+      "shortDesc": "AI 音乐生成器 - 快速创作歌曲",
+      "description": "Music FX 是一款 AI 音乐生成器，帮助用户快速创作歌曲。",
+      "tags": [
+        "AI",
+        "音乐",
+        "音乐生成"
+      ],
+      "status": "published",
+      "views": 3000,
+      "rating": 4.5
+    },
+    {
+      "id": 120,
+      "name": "AI Home Design",
+      "slug": "ai-home-design",
+      "url": "https://aihomedesign.io/",
+      "logoUrl": "",
+      "category": "AI 设计",
+      "priceType": "free",
+      "shortDesc": "AI 家居设计服务的网站",
+      "description": "AI Home Design 提供 AI 家居设计服务。",
+      "tags": [
+        "AI",
+        "家居设计",
+        "室内设计"
+      ],
+      "status": "published",
+      "views": 2800,
+      "rating": 4.4
+    },
+    {
+      "id": 121,
+      "name": "X-FUJN",
+      "slug": "x-fujn",
+      "url": "https://xfun.design/",
+      "logoUrl": "",
+      "category": "AI 设计",
+      "priceType": "free",
+      "shortDesc": "X-FUJN 智能包装设计平台",
+      "description": "X-FUJN 是智能包装设计平台。",
+      "tags": [
+        "AI",
+        "包装设计",
+        "设计"
+      ],
+      "status": "published",
+      "views": 2600,
+      "rating": 4.3
+    },
+    {
+      "id": 122,
+      "name": "图咖 AI",
+      "slug": "katuai",
+      "url": "https://www.katuai.cn/",
+      "logoUrl": "",
+      "category": "AI 设计",
+      "priceType": "free",
+      "shortDesc": "领先的图层化平面设计工具",
+      "description": "图咖 AI 是领先的图层化平面设计工具。",
+      "tags": [
+        "AI",
+        "平面设计",
+        "图层"
+      ],
+      "status": "published",
+      "views": 2800,
+      "rating": 4.4
+    },
+    {
+      "id": 123,
+      "name": "ReaddyAI",
+      "slug": "readdy-ai",
+      "url": "https://readdy.ai/",
+      "logoUrl": "",
+      "category": "AI 设计",
+      "priceType": "free",
+      "shortDesc": "AI 网站构建器轻松创建网站",
+      "description": "ReaddyAI 是 AI 网站构建器，帮助用户轻松创建网站。",
+      "tags": [
+        "AI",
+        "网站",
+        "网站构建"
+      ],
+      "status": "published",
+      "views": 3000,
+      "rating": 4.5
+    },
+    {
+      "id": 124,
+      "name": "MeshyAI",
+      "slug": "meshy-ai",
+      "url": "https://www.meshy.ai/",
+      "logoUrl": "",
+      "category": "AI 设计",
+      "priceType": "free",
+      "shortDesc": "创建 3D 模型的最简单方法",
+      "description": "MeshyAI 提供创建 3D 模型的最简单方法。",
+      "tags": [
+        "AI",
+        "3D 模型",
+        "3D"
+      ],
+      "status": "published",
+      "views": 2800,
+      "rating": 4.4
+    },
+    {
+      "id": 125,
+      "name": "TripoAI",
+      "slug": "tripo-ai",
+      "url": "https://www.tripo3d.ai",
+      "logoUrl": "",
+      "category": "AI 设计",
+      "priceType": "free",
+      "shortDesc": "更好的 AI 3D 工作站",
+      "description": "TripoAI 提供更好的 AI 3D 工作站。",
+      "tags": [
+        "AI",
+        "3D",
+        "3D 建模"
+      ],
+      "status": "published",
+      "views": 2600,
+      "rating": 4.3,
+      "_broken": true,
+      "_status": "timeout"
+    },
+    {
+      "id": 126,
+      "name": "NVIDIA",
+      "slug": "nvidia",
+      "url": "https://www.nvidia.com/en-us/",
+      "logoUrl": "",
+      "category": "AI 设计",
+      "priceType": "free",
+      "shortDesc": "NVIDIA 的人工智能计算领导力",
+      "description": "NVIDIA 提供人工智能计算领导力。",
+      "tags": [
+        "AI",
+        "NVIDIA",
+        "计算"
+      ],
+      "status": "published",
+      "views": 3500,
+      "rating": 4.7
+    },
+    {
+      "id": 127,
+      "name": "TryMusicAI",
+      "slug": "trymusic-ai",
+      "url": "https://trymusic.ai/zh",
+      "logoUrl": "",
+      "category": "在线音乐",
+      "priceType": "free",
+      "shortDesc": "将创意灵感转化为高品质音轨的 AI 音乐生成工具",
+      "description": "TryMusic.ai 是一款将创意灵感转化为高品质音轨的 AI 音乐生成工具。",
+      "tags": [
+        "AI",
+        "音乐",
+        "音乐生成"
+      ],
+      "status": "published",
+      "views": 2800,
+      "rating": 4.4
+    },
+    {
+      "id": 128,
+      "name": "音剪",
+      "slug": "yinjian",
+      "url": "https://audioeditor.ximalaya.com/",
+      "logoUrl": "",
+      "category": "在线音乐",
+      "priceType": "free",
+      "shortDesc": "一站式 AI 音频创作，专业音频制作",
+      "description": "音剪是一站式 AI 音频创作工具，专业音频制作，激发创新灵感，释放创意潜力，让你的音频创作更自由、便捷和精彩。",
+      "tags": [
+        "音频",
+        "AI",
+        "音频制作"
+      ],
+      "status": "published",
+      "views": 3000,
+      "rating": 4.5
+    },
+    {
+      "id": 129,
+      "name": "UBERDUCK",
+      "slug": "uberduck",
+      "url": "https://www.uberduck.ai/",
+      "logoUrl": "",
+      "category": "在线音乐",
+      "priceType": "free",
+      "shortDesc": "行业领先的 AI 音频创作平台",
+      "description": "Uberduck 是一个行业领先的 AI 音频创作平台，专注于提供高精准、富有表现力的合成人声。",
+      "tags": [
+        "AI",
+        "音频",
+        "人声"
+      ],
+      "status": "published",
+      "views": 2800,
+      "rating": 4.4
+    },
+    {
+      "id": 130,
+      "name": "AI Mastering",
+      "slug": "ai-mastering",
+      "url": "https://www.novatools.cn/tools/ai-mastering",
+      "logoUrl": "",
+      "category": "在线音乐",
+      "priceType": "free",
+      "shortDesc": "一款自动化的在线音频母带处理服务",
+      "description": "AI Mastering 是一款自动化的在线音频母带处理服务，让你轻松提升音乐音质。",
+      "tags": [
+        "AI",
+        "音频",
+        "母带处理"
+      ],
+      "status": "published",
+      "views": 2600,
+      "rating": 4.3
+    },
+    {
+      "id": 131,
+      "name": "Rap Generator",
+      "slug": "rap-generator",
+      "url": "https://www.novatools.cn/tools/rap-generator",
+      "logoUrl": "",
+      "category": "在线音乐",
+      "priceType": "free",
+      "shortDesc": "一款免费 AI 工具，帮助您快速生成独特的说唱歌曲和歌词",
+      "description": "Rap Generator 是一款免费 AI 工具，帮助您快速生成独特的说唱歌曲和歌词。",
+      "tags": [
+        "AI",
+        "音乐",
+        "说唱"
+      ],
+      "status": "published",
+      "views": 2800,
+      "rating": 4.4
+    },
+    {
+      "id": 132,
+      "name": "YouMusic.AI",
+      "slug": "youmusic-ai",
+      "url": "https://youmusic.ai/zh",
+      "logoUrl": "",
+      "category": "在线音乐",
+      "priceType": "free",
+      "shortDesc": "一键生成独特、免版税的高质量音乐",
+      "description": "YouMusic.AI 一键生成独特、免版税的高质量音乐，适用于视频、播客、广告等多种场景。",
+      "tags": [
+        "AI",
+        "音乐",
+        "音乐生成"
+      ],
+      "status": "published",
+      "views": 3000,
+      "rating": 4.5
+    },
+    {
+      "id": 133,
+      "name": "MusicStar.AI",
+      "slug": "musicstar-ai",
+      "url": "https://www.novatools.cn/tools/musicstar-ai",
+      "logoUrl": "",
+      "category": "在线音乐",
+      "priceType": "free",
+      "shortDesc": "超酷的 AI 音乐生成器，帮你轻松搞定原创歌曲",
+      "description": "MusicStar.AI 是一款超酷的 AI 音乐生成器，帮你轻松搞定原创歌曲，包含伴奏、歌词和人声，而且都是免版税的哦！",
+      "tags": [
+        "AI",
+        "音乐",
+        "音乐生成"
+      ],
+      "status": "published",
+      "views": 2800,
+      "rating": 4.4
+    }
+  ]
+}

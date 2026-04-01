@@ -24,10 +24,13 @@ export default function ToolDetailPage() {
       const res = await fetch('/api/tools');
       const data = await res.json();
       
+      // 解码 slug（处理中文 URL 编码）
+      const decodedSlug = decodeURIComponent(slug);
+      
       const foundTool = data.tools.find((t: any) => {
         const toolSlug = t.slug || generateSlug(t.name);
-        const pageSlug = slug.replace(/-+/g, '-');
-        return toolSlug === pageSlug || generateSlug(t.name) === pageSlug;
+        // 精确匹配 slug
+        return toolSlug === decodedSlug;
       });
       
       if (foundTool) {
@@ -36,6 +39,9 @@ export default function ToolDetailPage() {
           .filter((t: any) => t.category === foundTool.category && t.id !== foundTool.id)
           .slice(0, 4);
         setSimilarTools(similar);
+      } else {
+        console.log('未找到工具:', decodedSlug);
+        console.log('所有工具 slugs:', data.tools.map((t: any) => t.slug));
       }
     } catch (error) {
       console.error('加载失败:', error);
@@ -212,12 +218,21 @@ export default function ToolDetailPage() {
                 <div className="mt-8">
                   <h3 className="text-xl font-semibold mb-4">主要功能</h3>
                   <ul className="grid md:grid-cols-2 gap-3">
-                    {tool.features.split('\n').map((feature: string, index: number) => (
-                      <li key={index} className="flex items-start space-x-3">
-                        <span className="text-green-500 mt-1">✓</span>
-                        <span className="text-gray-600">{feature.replace(/^[-•*]\s*/, '')}</span>
-                      </li>
-                    ))}
+                    {(() => {
+                      // 安全处理 features：支持字符串、数组、null
+                      let featuresList: string[] = [];
+                      if (typeof tool.features === 'string') {
+                        featuresList = tool.features.split('\n');
+                      } else if (Array.isArray(tool.features)) {
+                        featuresList = tool.features;
+                      }
+                      return featuresList.map((feature: string, index: number) => (
+                        <li key={index} className="flex items-start space-x-3">
+                          <span className="text-green-500 mt-1">✓</span>
+                          <span className="text-gray-600">{feature?.replace(/^[-•*]\s*/, '') || feature}</span>
+                        </li>
+                      ));
+                    })()}
                   </ul>
                 </div>
               )}
