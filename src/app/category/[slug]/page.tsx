@@ -6,6 +6,16 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 
 const CATEGORY_MAP: Record<string, string> = {
+  // 英文 slug（首页使用）
+  'video': '影视资源',
+  'music': '在线音乐',
+  'ai': 'AI 工具',
+  'office': '效率办公',
+  'design': 'AI 设计',
+  'utility': '实用工具',
+  'dev': '开发编程',
+  
+  // 拼音 slug（兼容旧链接）
   'ai-gongju': 'AI 工具',
   'xiaolv-bangong': '效率办公',
   'yingshi-ziyuan': '影视资源',
