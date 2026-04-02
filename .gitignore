@@ -40,3 +40,4 @@ next-env.d.ts
 .next/cache
 .next/cache/*
 !.next/cache/needed-file
+.next/static/.cache
