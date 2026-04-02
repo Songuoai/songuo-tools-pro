@@ -129,10 +129,9 @@ export default function HomePage() {
           
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-5 max-w-6xl mx-auto">
             {mainCategories.map((cat, index) => (
-              <div
+              <Link
                 key={cat.id}
-                style={{ cursor: 'pointer' }}
-                onClick={() => window.location.href = `/category/${cat.slug}`}
+                href={`/category/${cat.slug}`}
                 className="group"
               >
                 <div 
@@ -180,7 +179,7 @@ export default function HomePage() {
                     {getCategoryCount(cat.category)} 个工具
                   </p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
