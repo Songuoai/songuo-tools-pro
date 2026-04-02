@@ -1,1 +1,0 @@
-self.__REACT_LOADABLE_MANIFEST='{"lib\\\\supabase.ts -> @/data/tools-database":{"id":6357,"files":["static/chunks/357.2d57a725aa4677f8.js"]}}';
