@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npx -y shx rm -rf .next && next build && npx -y shx rm -rf .next/cache .next/static/.cache",
+    "build": "npx -y shx rm -rf .next && next build && npx -y shx rm -rf .next/cache .next/static/.cache .next/dist",
     "export": "next build",
     "deploy": "npm run export && gh-pages -d out",
     "start": "next start",
