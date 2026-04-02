@@ -1,13 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  distDir: 'out',
   images: {
-    domains: ['supabase.co'],
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: '**.supabase.co',
-      },
-    ],
+    unoptimized: true,
   },
   typescript: {
     ignoreBuildErrors: true,
