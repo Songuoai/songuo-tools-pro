@@ -12,14 +12,8 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  // 优化配置
   reactStrictMode: false,
   poweredByHeader: false,
-  experimental: {
-    serverActions: {
-      bodySizeLimit: '2mb',
-    },
-  },
 }
 
 module.exports = nextConfig
